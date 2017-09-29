@@ -21,9 +21,6 @@ var map_track;
 var track_order_interval;
 var track_order_map_interval;
 var drag_marker_bounce=1;
-var versao=getStorage("versao");
-var versaoCode=getStorage("versaoCode");
-
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
