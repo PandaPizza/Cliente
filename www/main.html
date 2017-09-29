@@ -354,8 +354,19 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
   </div>
   </ons-page> 
 </script>
-<a href="javascript:alerta_atualizacao();">
-<div id="alerta-de-atualizacao"></div>
+
+  <ons-template id="alerta-atualizacao.html">
+  <ons-alert-dialog var="alertDialog">
+    <div class="alert-dialog-title trn" data-trn-key="atualizacao_titulo"><strong style="color: #ff3333">Atualização Necessária!</strong></div>
+    <div class="alert-dialog-content trn" data-trn-key="msg_atualizacao">
+      Atualizamos o Aplicativo, para que ele funcione corretamente. Você deve atualizar para a versão mais nova!
+    </div>
+    <div class="alert-dialog-footer">
+      <button class="alert-dialog-button trn" ng-click="alertDialog.hide();" data-trn-key="botao_atualizacao">OK</button>
+    </div>
+  </ons-alert-dialog>
+</ons-template>
+
 <script type="text/ons-template" id="home.html">
 <ons-navigator title="Navigator" var="sNavigator">
   <ons-page id="page-home" on-device-backbutton="exitKApp()" sliding-menu-ignore="true" onload="" style="background: url('background-1.jpg'); color: #9d585b;"> 
