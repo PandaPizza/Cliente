@@ -5,7 +5,7 @@
     id        = "app.pandapizza.cliente"
     versionCode = "0001"
     version   = "2.0">
-    <name>Clientes</name>
+    <name>Panda Pizza</name>
     <description>
         Aplicativo - Módulo Clientes para interação com o sistema Panda Pizza, Um MUNDO na palma da sua mão!
     </description>
