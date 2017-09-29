@@ -21,6 +21,9 @@ var map_track;
 var track_order_interval;
 var track_order_map_interval;
 var drag_marker_bounce=1;
+var versao=getStorage("versao");
+var versaoCode=getStorage("versaoCode");
+
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -162,7 +165,6 @@ ons.ready(function() {
 	
 		/*Atualização Master Hub (Atualiza Versão do Android)*/
 		   var versao_aplicativo = getStorage("versao_aplicativo");
-		   getStorage("versao");
 	       dump("versao_aplicativo=>"+versao_aplicativo);
 	       if(versao_aplicativo!=getStorage("versao")){
 				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
@@ -173,9 +175,7 @@ ons.ready(function() {
 	       }
 		   
 		   var versao_aplicativo_code = getStorage("versao_aplicativo_code");
-		   getStorage("versaoCode");
 		   dump("versao_aplicativo_code=>"+versao_aplicativo_code);
-
 	       if(versao_aplicativo_code!=getStorage("versaoCode")){
 				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
     			alertDialog.show();
