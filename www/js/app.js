@@ -256,7 +256,10 @@ ons.ready(function() {
     
     document.getElementById('log').innerHTML = debug;
 
-	};
+	} else {
+		
+	}
+	
 ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
     alertDialog.show();
   });		
