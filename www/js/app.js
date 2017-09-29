@@ -2504,6 +2504,10 @@ function menuCategoryResult(data)
 		window.plugins.OneSignal.sendTag(""+keyOneSignal+"", "visita");
 	}
 	$("#menucategory-page .restauran-title").text(data.restaurant_name);
+	/* Atualização João Neves (Pede.ai) Cabeçalho App dentro do menu do estabelecimento */
+	$("#menucategory-page .estabelecimento-header").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_bg+'); background-size: cover; padding-top: 45px; box-sizing: border-box; position: fixed; top: 0px; left: 0px; right: 0px; height: 165px;');
+	/* Fim da Atualização */
+	
 	$("#menucategory-page .rating-stars").attr("data-score",data.ratings.ratings);
 	initRating();
 	$("#menucategory-page .logo-wrap").html('<img src="'+data.logo+'" />')
@@ -4129,9 +4133,14 @@ function placeOrder()
 function showMerchantInfo(data)
 {
 	dump(data);
+	/* Atualização João Neves (Pede.ai) Cabeçalho App dentro do menu do estabelecimento */
+	$("#page-merchantinfo .estabelecimento-header").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_info.merchant_bg+'); background-size: cover; background-size: cover; padding-top: 45px; box-sizing: border-box; position: fixed; top: 0px; left: 0px; right: 0px; height: 165px; z-index: -1;');
+	/* Fim da Atualização */
 	$("#page-merchantinfo h3").html(data.merchant_info.restaurant_name);
 	$("#page-merchantinfo h5").html(data.merchant_info.cuisine);
-	$("#page-merchantinfo address").html(data.merchant_info.address);
+	/* Atualização João Neves (Pede.ai) Cabeçalho App dentro do menu do estabelecimento */
+	$("#page-merchantinfo address").html(data.merchant_info.address+ "<br><br>" + data.merchant_info.merchant_information);
+	/* Fim da Atualização */
 	$("#page-merchantinfo .rating-stars").attr("data-score",data.merchant_info.ratings.ratings);	
 	if (!empty(data.reviews)){
 	   $(".total-reviews").html(data.reviews.total_review + " "+ getTrans("reviews",'reviews') );
