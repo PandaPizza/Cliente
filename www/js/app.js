@@ -26,7 +26,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() { 
 
-console.log('BuildInfo.packageName    =' + BuildInfo.packageName);
+	console.log('BuildInfo.packageName    =' + BuildInfo.packageName);
 	console.log('BuildInfo.basePackageName=' + BuildInfo.basePackageName);
 	console.log('BuildInfo.displayName    =' + BuildInfo.displayName);
 	console.log('BuildInfo.name           =' + BuildInfo.name);
@@ -169,13 +169,6 @@ $( document ).on( "keyup", ".numeric_only", function() {
 
 ons.bootstrap();  
 ons.ready(function() {
-	
-
-    
-
-	
-	
-	
 	
 	dump('ready');
 	
@@ -605,7 +598,7 @@ document.addEventListener("pageinit", function(e) {
 		   if (isDebug()){
 		    	$(".software_version").html( "2.0 - Debug" );
 		    } else {
-		    	$(".software_version").html( BuildInfo.version );
+		    	$(".software_version").html( BuildInfo.version+" - ("+BuildInfo.versionCode+")");
 		    }
 		
 		  callAjax("getSettings",
