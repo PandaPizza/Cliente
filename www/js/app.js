@@ -163,12 +163,17 @@ ons.ready(function() {
 	
 	dump('ready');
 	
-	
-	
-ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
-    alertDialog.show();
-  });		
-		
+		/*Atualização Master Hub (Atualiza Versão do Android)*/
+		   var versao_aplicativo = getStorage("versao_aplicativo");
+	       dump("versao_aplicativo=>"+versao_aplicativo);
+	       if(versao_aplicativo!=getStorage("versao")){
+				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
+    			alertDialog.show();
+  				});		
+	       } else {
+	       	  
+	       }
+	/*Fim da Atualização*/
 		
 	if(isDebug()){
 		removeStorage("search_address");		
