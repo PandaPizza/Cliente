@@ -165,16 +165,26 @@ ons.ready(function() {
 	
 		/*Atualização Master Hub (Atualiza Versão do Android)*/
 		   var versao_aplicativo = getStorage("versao_aplicativo");
-		   var versao_aplicativo_code = getStorage("versao_aplicativo_code");
 	       dump("versao_aplicativo=>"+versao_aplicativo);
-		   dump("versao_aplicativo_code=>"+versao_aplicativo_code);
-	       if(versao_aplicativo!=getStorage("versao") | versao_aplicativo_code!=getStorage("versaoCode")){
+	       if(versao_aplicativo!=getStorage("versao")){
 				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
     			alertDialog.show();
   				});		
 	       } else {
 	       	  
 	       }
+		   
+		   var versao_aplicativo_code = getStorage("versao_aplicativo_code");
+		   dump("versao_aplicativo_code=>"+versao_aplicativo_code);
+
+	       if(versao_aplicativo_code!=getStorage("versaoCode")){
+				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
+    			alertDialog.show();
+  				});		
+	       } else {
+	       	  
+	       }
+
 	/*Fim da Atualização*/
 		
 	if(isDebug()){
