@@ -27,18 +27,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() { 
 
-	console.log('BuildInfo.packageName    =' + BuildInfo.packageName);
-	console.log('BuildInfo.basePackageName=' + BuildInfo.basePackageName);
-	console.log('BuildInfo.displayName    =' + BuildInfo.displayName);
-	console.log('BuildInfo.name           =' + BuildInfo.name);
-	console.log('BuildInfo.version        =' + BuildInfo.version);
-	console.log('BuildInfo.versionCode    =' + BuildInfo.versionCode);
-	console.log('BuildInfo.debug          =' + BuildInfo.debug);
-	console.log('BuildInfo.buildType      =' + BuildInfo.buildType);
-	console.log('BuildInfo.flavor         =' + BuildInfo.flavor);
-	console.log('BuildInfo.buildDate      =' + BuildInfo.buildDate);
-	console.log('BuildInfo.installDate    =' + BuildInfo.installDate);   
-
 var notificationOpenedCallback = function(jsonData) {
     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
   };
@@ -599,7 +587,7 @@ document.addEventListener("pageinit", function(e) {
 		   if (isDebug()){
 		    	$(".software_version").html( "2.0 - Debug" );
 		    } else {
-		    	$(".software_version").html( BuildInfo.version+" - ("+BuildInfo.versionCode+")");
+		    	$(".software_version").html(versao);
 		    }
 		
 		  callAjax("getSettings",
