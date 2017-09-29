@@ -4651,9 +4651,9 @@ function modifyAddressBook(id)
     sNavigator.pushPage("addressBookDetails.html", options);	
 }
 
-    <!-- Adicionando Busca por CEP -->
+    // Adicionando Busca por CEP
     
-    function limpa_formulário_cep() {
+    function limpa_formulario_cep() {
             //Limpa valores do formulário de cep.
             document.getElementById('rua').value=("");
             document.getElementById('bairro').value=("");
@@ -4672,7 +4672,7 @@ function modifyAddressBook(id)
         } //end if.
         else {
             //CEP não Encontrado.
-            limpa_formulário_cep();
+            limpa_formulario_cep();
             alert("CEP não encontrado.");
         }
     }
@@ -4710,13 +4710,13 @@ function modifyAddressBook(id)
             } //end if.
             else {
                 //cep é inválido.
-                limpa_formulário_cep();
+                limpa_formulario_cep();
                 alert("Formato de CEP inválido.");
             }
         } //end if.
         else {
             //cep sem valor, limpa formulário.
-            limpa_formulário_cep();
+            limpa_formulario_cep();
         }
     };
 
@@ -5951,7 +5951,7 @@ function isDebug()
 {	
 	//on/off
 	//return true;
-	return false;
+	return true;
 }
 
 var rzr_successCallback = function(payment_id) {
