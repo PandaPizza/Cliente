@@ -21,7 +21,9 @@ var map_track;
 var track_order_interval;
 var track_order_map_interval;
 var drag_marker_bounce=1;
-var versao=BuildInfo.version+" - ("+BuildInfo.versionCode+")";
+var versao=BuildInfo.version;
+var versaocode=BuildInfo.versionCode;
+
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -587,7 +589,7 @@ document.addEventListener("pageinit", function(e) {
 		   if (isDebug()){
 		    	$(".software_version").html( "2.0 - Debug" );
 		    } else {
-		    	$(".software_version").html(getStorage("versao"));
+		    	$(".software_version").html( getStorage("versao") );
 		    }
 		
 		  callAjax("getSettings",
