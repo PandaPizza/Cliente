@@ -169,7 +169,6 @@ ons.ready(function() {
 	       dump("versao_aplicativo=>"+versao_aplicativo);
 		   dump("versao_aplicativo_code=>"+versao_aplicativo_code);
 	       if(versao_aplicativo!=getStorage("versao") | versao_aplicativo_code!=getStorage("versaoCode")){
-			   
 				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
     			alertDialog.show();
   				});		
