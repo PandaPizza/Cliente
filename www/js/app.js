@@ -203,25 +203,6 @@ ons.ready(function() {
 	
 }); /*end ready*/
 
-function alerta_atualizacao()
-{
-	var htm='';
-	htm+='<ons-template id="alerta-atualizacao.html">';
-	htm+='<ons-alert-dialog var="alertDialog">';
-	htm+='<div class="alert-dialog-title"><strong style="color: #ff3333">Atualização Necessária!</strong></div>';
-	htm+='<div class="alert-dialog-content">';
-	htm+='Atualizamos o Aplicativo, para que ele funcione corretamente. Você deve atualizar para a versão mais nova!';
-	htm+='</div>';
-	htm+='<div class="alert-dialog-footer">';
-	htm+='<button class="alert-dialog-button" ng-click="alertDialog.hide();">OK</button>'; 
-	htm+='</div>';
-	htm+='</ons-alert-dialog>';
-	htm+='</ons-template>';	
-		
-	createElement('alerta-de-atualizacao',htm);	
-	translatePage();
-}
-
 function refreshConnection()
 {	
 	if ( !hasConnection() ){
