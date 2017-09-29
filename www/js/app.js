@@ -587,7 +587,7 @@ document.addEventListener("pageinit", function(e) {
 		   if (isDebug()){
 		    	$(".software_version").html( "2.0 - Debug" );
 		    } else {
-		    	$(".software_version").html(versao);
+		    	$(".software_version").html(getStorage("versao"));
 		    }
 		
 		  callAjax("getSettings",
