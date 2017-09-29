@@ -24,7 +24,19 @@ var drag_marker_bounce=1;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady() {    
+function onDeviceReady() { 
+
+console.log('BuildInfo.packageName    =' + BuildInfo.packageName);
+	console.log('BuildInfo.basePackageName=' + BuildInfo.basePackageName);
+	console.log('BuildInfo.displayName    =' + BuildInfo.displayName);
+	console.log('BuildInfo.name           =' + BuildInfo.name);
+	console.log('BuildInfo.version        =' + BuildInfo.version);
+	console.log('BuildInfo.versionCode    =' + BuildInfo.versionCode);
+	console.log('BuildInfo.debug          =' + BuildInfo.debug);
+	console.log('BuildInfo.buildType      =' + BuildInfo.buildType);
+	console.log('BuildInfo.flavor         =' + BuildInfo.flavor);
+	console.log('BuildInfo.buildDate      =' + BuildInfo.buildDate);
+	console.log('BuildInfo.installDate    =' + BuildInfo.installDate);   
 
 var notificationOpenedCallback = function(jsonData) {
     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
