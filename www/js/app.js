@@ -542,6 +542,10 @@ document.addEventListener("pageinit", function(e) {
 		
 		  break;
 		  
+		  case "page-atualizar":
+		
+		  break;
+		  
 		  case "showHome-help":
 		  
 		  break;

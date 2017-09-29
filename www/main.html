@@ -72,6 +72,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 <script src="js/countries.js?ver=1.0"></script>
 <script src="js/app.js?ver=1.0"></script>
 <script src="js/share.js"></script>
+<script src="js/atualiza.js"></script>
 
 </head>
 <body>
@@ -173,6 +174,109 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
    </div> 
   
   </ons-page>
+</script>
+
+<script type="text/ons-template" id="atualizar.html">   
+<ons-navigator title="Navigator" var="sNavigator"> 
+<ons-page id="page-atualizar" style="
+    background: url(background-1.jpg);" on-device-backbutton="backtoHome()"  >
+   <ons-toolbar>     
+   
+    <div class="left">
+     <ons-toolbar-button onclick="setHome();">
+        <ons-icon icon="fa-chevron-left"></ons-icon>
+     </ons-toolbar-button>        
+    </div> 
+         
+    <div class="center white"><span id="search-text" class="trn" data-trn-key="nao_atualizar">Não quero atualizar agora!</span></div>           
+    
+        
+   </ons-toolbar>
+
+   <ons-scroller>
+     <div class="wrapper" style="margin-left: 25%; margin-right: 25%;">
+     <style type="text/css">
+     	.btnz {
+    height: 35px;
+    background: none;
+    border: none;
+    display: block;
+    background-size: 35px 35px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 205px;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px gray;
+    text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+}
+.btnz:hover {
+    color: #efefef;
+}
+.facebook {
+    background-color: #3b5998;
+}
+.twitter {
+    background-color: #55acee;
+}
+.whats {
+    background-color: #25d366;
+}
+    .swiper-container {
+        width: auto;
+        height: 25%;
+    }
+	
+	 .swiper-container55 {
+        width: auto;
+        height: 23%;
+    }
+	
+    .swiper-slide {
+        width:100%;
+		height:100%;
+		text-align: center;
+        font-size: 18px;
+        background: #fff;
+		
+		
+		
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+	
+	.swiper-container1 {
+        width: 100%;
+        height: auto;
+    }
+     </style>
+            <h4 style="text-align: center;">Atualizamos para um melhor funcionamento!</h4>
+            <p> Clique no botão abaixo para fazer a atialização do aplicativo dereto da Google Play!</p>
+        
+            <button class="btnz whats" onClick="AtualizarApp()"><i class="fa fa-update"></i> Atualizar </button>
+            
+        </div>
+
+   </ons-scroller>
+      
+</ons-page>
+</ons-navigator> 
 </script>
 
 <script type="text/ons-template" id="sharetheapp.html">   
@@ -338,6 +442,11 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
        <ons-list-item onclick="menu.setMainPage('sharetheapp.html', {closeMenu: true})" class="bottom-menu-item">
       <ons-icon icon="ion-android-share-alt"></ons-icon> 
       <span class="trn" data-trn-key="share-the-app">Share the app</span>
+    </ons-list-item>
+	
+       <ons-list-item onclick="menu.setMainPage('atualizar.html', {closeMenu: true})" class="bottom-menu-item">
+      <ons-icon icon="ion-android-share-alt"></ons-icon> 
+      <span class="trn" data-trn-key="atualizar-app">Atualizar Aplicativo</span>
     </ons-list-item>    
 	
 	 <ons-list-item onclick="Dicas();" class="bottom-menu-item">
@@ -357,12 +466,12 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 
   <ons-template id="alerta-atualizacao.html">
   <ons-alert-dialog var="alertDialog">
-    <div class="alert-dialog-title" ><strong class="trn" style="text-align:center;  color: #ff3333" data-trn-key="atualizacao_titulo">Atualização Necessária!</strong></div>
+    <div class="alert-dialog-title" style="align:center; ><strong class="trn" color: #ff3333" data-trn-key="atualizacao_titulo">Atualização Necessária!</strong></div>
     <div class="alert-dialog-content trn" data-trn-key="msg_atualizacao">
       Atualizamos o Aplicativo!
     </div>
     <div class="alert-dialog-footer">
-      <button class="alert-dialog-button trn" ng-click="alertDialog.hide();" data-trn-key="botao_atualizacao">OK</button>
+      <button class="alert-dialog-button trn" ng-click="alertDialog.hide(); menu.setMainPage('atualizar.html', {closeMenu: true})" data-trn-key="botao_atualizacao">OK</button>
     </div>
   </ons-alert-dialog>
 </ons-template>
