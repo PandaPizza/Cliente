@@ -21,6 +21,8 @@ var map_track;
 var track_order_interval;
 var track_order_map_interval;
 var drag_marker_bounce=1;
+var versao_aplicativo;
+var versao_aplicativo_code;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -161,19 +163,11 @@ ons.ready(function() {
 	dump('ready');
 	
 		/*Atualização Master Hub (Atualiza Versão do Android)*/
-		   var versao_aplicativo = getStorage("versao_aplicativo");
+		   versao_aplicativo = getStorage("versao_aplicativo");
 	       dump("versao_aplicativo=>"+versao_aplicativo);
-	       if(versao_aplicativo!=getStorage("versao")){
-				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
-    			alertDialog.show();
-  				});		
-	       } else {
-	       	  
-	       }
-		   
-		   var versao_aplicativo_code = getStorage("versao_aplicativo_code");
+		   versao_aplicativo_code = getStorage("versao_aplicativo_code");
 		   dump("versao_aplicativo_code=>"+versao_aplicativo_code);
-	       if(versao_aplicativo_code!=getStorage("versaoCode")){
+	       if(versao_aplicativo!=getStorage("versao") || versao_aplicativo_code!=getStorage("versaoCode")){
 				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
     			alertDialog.show();
   				});		
@@ -208,6 +202,25 @@ ons.ready(function() {
 	});
 	
 }); /*end ready*/
+
+function alerta_atualizacao()
+{
+	var htm='';
+	htm+='<ons-template id="alerta-atualizacao.html">';
+	htm+='<ons-alert-dialog var="alertDialog">';
+	htm+='<div class="alert-dialog-title"><strong style="color: #ff3333">Atualização Necessária!</strong></div>';
+	htm+='<div class="alert-dialog-content">';
+	htm+='Atualizamos o Aplicativo, para que ele funcione corretamente. Você deve atualizar para a versão mais nova!';
+	htm+='</div>';
+	htm+='<div class="alert-dialog-footer">';
+	htm+='<button class="alert-dialog-button" ng-click="alertDialog.hide();">OK</button>'; 
+	htm+='</div>';
+	htm+='</ons-alert-dialog>';
+	htm+='</ons-template>';	
+		
+	createElement('alerta-de-atualizacao',htm);	
+	translatePage();
+}
 
 function refreshConnection()
 {	
