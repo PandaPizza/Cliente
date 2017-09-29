@@ -285,6 +285,19 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 </ons-page>	
 </script>
 
+<ons-template id="alerta-atualizacao.html">
+  <ons-alert-dialog var="alertDialog">
+    <div class="alert-dialog-title"><strong style="color: #ff3333">Atualização Necessária!</strong></div>
+    <div class="alert-dialog-content">
+      Atualizamos o Aplicativo, para que ele funcione corretamente. Você deve atualizar para a versão mais nova!
+    </div>
+    <div class="alert-dialog-footer">
+      <button class="alert-dialog-button" ng-click="alertDialog.hide();">OK</button>
+    </div>
+  </ons-alert-dialog>
+</ons-template>
+
+
 <script type="text/ons-template" id="menu.html">
   <ons-page modifier="menu-page" style="background:url('background-1.jpg'); border-right: 2px dashed #ddd; box-sizing: border-box;">
   
@@ -450,7 +463,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
   <ons-carousel swipeable overscrollable auto-scroll fullscreen var="carousel">
     <ons-carousel-item style="background-color: gray;">
 		  <div class="box" align="right" style="right:20px;top:10px"><img src="css/images/slides/bot_fecha.png" width="40px" height="40px" onclick="fechar_prop();" ></div>
-      <div class="item-label">PÁGINA 1</div>
+      <div id="log"></div>
     </ons-carousel-item>
     <ons-carousel-item style="background-color: #085078;">
 		  <div class="box" align="right" style="right:20px;top:10px"><img src="css/images/slides/bot_fecha.png" width="40px" height="40px" onclick="fechar_prop();" ></div>
