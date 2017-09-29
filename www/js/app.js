@@ -21,8 +21,8 @@ var map_track;
 var track_order_interval;
 var track_order_map_interval;
 var drag_marker_bounce=1;
-var versao=BuildInfo.version;
-var versaocode=BuildInfo.versionCode;
+var versao;
+var versaoCode;
 
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -1713,6 +1713,8 @@ function callAjax(action,params)
 
 				   /*versao_aplicativo*/
 				   setStorage("versao_aplicativo",data.details.settings.versao_aplicativo);
+				   setStorage("versao",BuildInfo.version);
+				   setStorage("versaoCode",BuildInfo.versionCode);
 
 				   /*link_google_play*/
 				   setStorage("link_google_play",data.details.settings.link_google_play);
