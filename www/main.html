@@ -355,10 +355,6 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
   </ons-page> 
 </script>
 
-<script type="text/ons-template" id="home.html">
-<ons-navigator title="Navigator" var="sNavigator">
-  <ons-page id="page-home" on-device-backbutton="exitKApp()" sliding-menu-ignore="true" onload="" style="background: url('background-1.jpg'); color: #9d585b;"> 
-  
   <ons-template id="alerta-atualizacao.html">
   <ons-alert-dialog var="alertDialog">
     <div class="alert-dialog-title"><strong style="color: #ff3333">Atualização Necessária!</strong></div>
@@ -371,7 +367,9 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
   </ons-alert-dialog>
 </ons-template>
 
-        
+<script type="text/ons-template" id="home.html">
+<ons-navigator title="Navigator" var="sNavigator">
+  <ons-page id="page-home" on-device-backbutton="exitKApp()" sliding-menu-ignore="true" onload="" style="background: url('background-1.jpg'); color: #9d585b;"> 
     <ons-toolbar>
       <div class="left">
         <ons-toolbar-button ng-click="fechar_prop(); menu.toggleMenu()"><ons-icon icon="ion-android-funnel" style="font-size: 18px;"></ons-icon></ons-toolbar-button>        
