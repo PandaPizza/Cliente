@@ -188,7 +188,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
      </ons-toolbar-button>        
     </div> 
          
-    <div class="center white"><span id="search-text" class="trn" data-trn-key="nao_atualizar">Não quero atualizar agora!</span></div>           
+    <div class="center white"><span id="search-text2" class="trn" data-trn-key="nao_atualizar">Não quero atualizar agora!</span></div>           
     
         
    </ons-toolbar>
@@ -197,18 +197,18 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
      <div class="wrapper" style="margin-left: 15%; margin-right: 15%;">
      <style type="text/css">
      	.btnz {
-    height: 45px;
+    height: 60px;
     background: none;
     border: none;
     display: block;
     background-size: 35px 35px;
     background-position: right center;
     background-repeat: no-repeat;
-    border-radius: 4px;
+    border-radius: 10px;
     color: white;
     font-size: 18px;
     margin-bottom: 15px;
-    width: 235px;
+    width: -webkit-fill-available;
     border-bottom: 2px solid transparent;
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
@@ -266,18 +266,106 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
         height: auto;
     }
      </style>
-            <h4 style="text-align: center;" class="trn" data-trn-key="atualizamos_para_melhor">Atualizamos para um melhor funcionamento!</h4>
-            <p class="trn" data-trn-key="clique_abaixo_para_atualizar"> Clique no botão abaixo para fazer a atualização do aplicativo direto da Google Play!</p>
-        
-            <button class="btnz whats trn" data-trn-key="btn_atualizar" onClick="AtualizarApp()" ><i class="fa fa-download"></i> Atualizar </button>
-            
+			<div id="versao-instalada"></div>
         </div>
+		
+		
 
    </ons-scroller>
       
 </ons-page>
 </ons-navigator> 
 </script>
+
+<script type="text/ons-template" id="atualizar-forcada.html">   
+<ons-navigator title="Navigator" var="sNavigator"> 
+<ons-page id="page-atualizar" style="
+    background: url(background-1.jpg);" on-device-backbutton="alertDialog.show()"  >
+
+   <ons-scroller>
+     <div class="wrapper" style="margin-left: 15%; margin-right: 15%;">
+     <style type="text/css">
+     	.btnz {
+    height: 60px;
+    background: none;
+    border: none;
+    display: block;
+    background-size: 35px 35px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    width: -webkit-fill-available;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px gray;
+    text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+}
+.btnz:hover {
+    color: rgba(187,236,182,0.70);
+}
+.facebook {
+    background-color: #3b5998;
+}
+.twitter {
+    background-color: #55acee;
+}
+.whats {
+    background-color: rgba(16,108,51,0.81);
+}
+    .swiper-container {
+        width: auto;
+        height: 25%;
+    }
+	
+	 .swiper-container55 {
+        width: auto;
+        height: 23%;
+    }
+	
+    .swiper-slide {
+        width:100%;
+		height:100%;
+		text-align: center;
+        font-size: 18px;
+        background: #fff;
+		
+		
+		
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+	
+	.swiper-container1 {
+        width: 100%;
+        height: auto;
+    }
+     </style>
+			<div id="versao-instalada"></div>
+        </div>
+		
+		
+
+   </ons-scroller>
+      
+</ons-page>
+</ons-navigator> 
+</script>
+
 
 <script type="text/ons-template" id="sharetheapp.html">   
 <ons-navigator title="Navigator" var="sNavigator"> 
@@ -389,8 +477,6 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 </ons-page>	
 </script>
 
-
-
 <script type="text/ons-template" id="menu.html">
   <ons-page modifier="menu-page" style="background:url('background-1.jpg'); border-right: 2px dashed #ddd; box-sizing: border-box;">
   
@@ -442,18 +528,13 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
        <ons-list-item onclick="menu.setMainPage('sharetheapp.html', {closeMenu: true})" class="bottom-menu-item">
       <ons-icon icon="ion-android-share-alt"></ons-icon> 
       <span class="trn" data-trn-key="share-the-app">Share the app</span>
-    </ons-list-item>
+    </ons-list-item>    
 	
        <ons-list-item onclick="menu.setMainPage('atualizar.html', {closeMenu: true})" class="bottom-menu-item">
-      <ons-icon icon="ion-android-share-alt"></ons-icon> 
+      <ons-icon icon="fa-download"></ons-icon> 
       <span class="trn" data-trn-key="atualizar-app">Atualizar Aplicativo</span>
     </ons-list-item>    
 	
-	 <ons-list-item onclick="Dicas();" class="bottom-menu-item">
-      <ons-icon icon="fa-lightbulb-o"></ons-icon> 
-      <span class="trn" data-trn-key="dicas">Dicas</span>
-    </ons-list-item>  
-    
     <ons-list-item onclick="logout();" class="bottom-menu-item logout-menu">
       <ons-icon icon="ion-log-out"></ons-icon> 
       <span class="trn" data-trn-key="logout">Logout</span>
@@ -464,14 +545,26 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
   </ons-page> 
 </script>
 
-  <ons-template id="alerta-atualizacao.html" on-device-backbutton="exitKApp()">
-  <ons-alert-dialog var="alertDialog">
+  <ons-template id="alerta-atualizacao.html">
+  <ons-alert-dialog var="alertDialog" on-device-backbutton="exitKApp()">
     <div class="alert-dialog-title" style="align:center;" ><strong class="trn" style="color: #ff3333" data-trn-key="atualizacao_titulo"> Atualização Necessária! </strong></div>
     <div class="alert-dialog-content trn" data-trn-key="msg_atualizacao">
       Atualizamos o Aplicativo!
     </div>
     <div class="alert-dialog-footer">
       <button class="alert-dialog-button trn" ng-click="alertDialog.hide(); menu.setMainPage('atualizar.html', {closeMenu: true})" data-trn-key="botao_atualizacao">OK</button>
+    </div>
+  </ons-alert-dialog>
+</ons-template>
+
+  <ons-template id="alerta-atualizacao-forcada.html">
+  <ons-alert-dialog var="alertDialog" on-device-backbutton="exitKApp()">
+    <div class="alert-dialog-title" style="align:center;" ><strong class="trn" style="color: #ff3333" data-trn-key="atualizacao_titulo"> Atualização Necessária! </strong></div>
+    <div class="alert-dialog-content trn" data-trn-key="msg_atualizacao">
+      Atualizamos o Aplicativo!
+    </div>
+    <div class="alert-dialog-footer">
+      <button class="alert-dialog-button trn" ng-click="alertDialog.hide(); menu.setMainPage('atualizar-forcada.html', {closeMenu: true})" data-trn-key="botao_atualizacao">OK</button>
     </div>
   </ons-alert-dialog>
 </ons-template>
@@ -495,10 +588,10 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 		</br></br>
 		</div>
        
-    <div class="home-page wrapper center">       
-       <h4 class="trn" data-trn-key="enter_your_location" style="display: none; margin-top: 0px; margin-bottom: 18px; color: #ccc; font-size: 16px; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">Enter Your Location</h4>
-       
-       <section class="field-section" style="border: 1px solid #ddd; padding: 0px; border-radius: 8px; background: rgba(255,255,255,0.7); box-shadow: 1px -1px 10px 2px rgba(0,0,0,0.6);">
+    <div class="home-page center">       
+       <h4 class="trn" data-trn-key="enter_your_location" style="display: block; margin-top: 0px; margin-bottom: 18px; color: #ccc; font-size: 16px; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);">Enter Your Location</h4>
+       <div class="wrapper">
+       <section class="field-section wrapper" style="border: 1px solid #ddd; padding: 0px; border-radius: 8px; background: rgba(255,255,255,0.7); box-shadow: 1px -1px 10px 2px rgba(0,0,0,0.6);">
          <input id="s" value="" type="text" class="text-input text-input--underbar trn" ng-model="text" placeholder="Street Address,City,State" data-trn-key="home_search_placeholder" 
          style="display: block; width: auto; color: #000; display: inline;float: left; padding: 5px 16px 5px 16px; height: 40px; border: 0px solid #ddd; border-radius: 20px; background: rgba(0,0,0,0);">
 		<div style="text-align: right;">
@@ -506,7 +599,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 	      <div class="search-btn" style="top: 3.5px; right: 26.5px;"><ons-icon icon="ion-android-locate" style="font-size: 24px;"></ons-icon></div>
 	   </button>
 	   </div>
-	   </section>
+	   </section></div>
        <br><br>
 	<div id="codigo-busca"></div>
 	
@@ -536,30 +629,6 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
          </ons-icon> <span class="trn" data-trn-key="tap_to_retry">Tap to retry</span>
       </button>
     </div>
-		
-	 <ons-carousel swipeable id="carousel1" overscrollable auto-scroll fullscreen style="width: 0%; height: 0%; position: relative; visibility=hidden" var="carousel1">
-    
-    <ons-carousel-item style="background-color: gray;">
-		  <div class="box" align="right" style="right:20px;top:10px"><img src="css/images/slides/bot_fecha.png" width="40px" height="40px" onclick="fechar_prop();" ></div>
-      <div class="item-label">PÁGINA 1</div>
-    </ons-carousel-item>
-    <ons-carousel-item style="background-color: #085078;">
-		  <div class="box" align="right" style="right:20px;top:10px"><img src="css/images/slides/bot_fecha.png" width="40px" height="40px" onclick="fechar_prop();" ></div>
-      <div class="item-label">PÁGINA 2</div>
-    </ons-carousel-item>
-    <ons-carousel-item style="background-color: #373B44;">
-		  <div class="box" align="right" style="right:20px;top:10px"><img src="css/images/slides/bot_fecha.png" width="40px" height="40px" onclick="fechar_prop();" ></div>
-      <div class="item-label">PÁGINA 3</div>
-    </ons-carousel-item>
-    <ons-carousel-item style="background-color: #D38312;">
-		  <div class="box" align="right" style="right:20px;top:10px"><img src="css/images/slides/bot_fecha.png" width="40px" height="40px" onclick="fechar_prop();" ></div>
-      <div class="item-label">PÁGINA 4</div>
-    </ons-carousel-item>
-    <ons-carousel-cover>
-      <div class="cover-label">Arraste para a direita ou para a esquerda.</div>
-    </ons-carousel-cover>
-  </ons-carousel>
-        
   </ons-page>
 </ons-navigator>  
 </script>
@@ -607,7 +676,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
      </ons-toolbar-button>        
     </div> 
      
-     <div class="center white"><span id="search-text"></span></div>
+     <div class="center white"><span id="search-text2"></span></div>
      
       <div class="right">         
 		 <ons-toolbar-button onclick="menu.setMainPage('showHome-help.html', {closeMenu: true})" ><ons-icon icon="ion-ios-help-outline"></ons-toolbar-button>
@@ -620,7 +689,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 			Doces
 		</div>
 	</div>
-   <div style="margin-top:160px; padding: 20px; color: #ddd;" class="wrapper">
+   <div style="margin-top:160px; color: #ddd;" class="wrapper">
 		<ons-icon icon="ion-ios-star" style="color: #ddd; line-height: 3px;font-size: 10px;"></ons-icon><ons-icon icon="ion-ios-star" style="color: #ffc107; line-height: 3px;"></ons-icon><ons-icon icon="ion-ios-star" style="color: #ddd; line-height: 3px; margin-right: 8px;font-size: 10px;"></ons-icon>Destaques desta Semana!
 		<div style="width: 100%; padding-top: 10px; padding-bottom: 10x; overflow:auto; display: block; white-space: nowrap;">
 			<div style="width: 250px; height: 100px; border: 2px solid #B44402; border-radius: 5px; display: inline-block; background: url('contractor-1.jpg') no-repeat center center; background-size: cover;">
@@ -672,7 +741,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
      </ons-toolbar-button>        
     </div> 
      
-     <div class="center white"><span id="search-text"></span></div>
+     <div class="center white"><span id="search-text2"></span></div>
      
       <div class="right">         
 		 <ons-toolbar-button onclick="menu.setMainPage('showHome-help.html', {closeMenu: true})" ><ons-icon icon="ion-ios-help-outline"></ons-toolbar-button>
@@ -685,7 +754,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 			Padarias
 		</div>
 	</div>
-   <div style="margin-top:160px; padding: 20px; color: #ddd;" class="wrapper">
+   <div style="margin-top:160px; color: #ddd;" class="wrapper">
 		<ons-icon icon="ion-ios-star" style="color: #ddd; line-height: 3px;font-size: 10px;"></ons-icon><ons-icon icon="ion-ios-star" style="color: #ffc107; line-height: 3px;"></ons-icon><ons-icon icon="ion-ios-star" style="color: #ddd; line-height: 3px; margin-right: 8px;font-size: 10px;"></ons-icon>Destaques desta Semana!
 		<div style="width: 100%; padding-top: 10px; padding-bottom: 10x; overflow:auto; display: block; white-space: nowrap;">
 			<div style="width: 250px; height: 100px; border: 2px solid #B44402; border-radius: 5px; display: inline-block; background: url('contractor-1.jpg') no-repeat center center; background-size: cover;">
@@ -739,7 +808,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
      </ons-toolbar-button>        
     </div> 
      
-     <div class="center white"><span id="search-text"></span></div>
+     <div class="center white"><span id="search-text2"></span></div>
      
       <div class="right">         
 		 <ons-toolbar-button onclick="menu.setMainPage('showHome-help.html', {closeMenu: true})" ><ons-icon icon="ion-ios-help-outline"></ons-toolbar-button>
@@ -752,7 +821,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 			Lanches
 		</div>
 	</div>
-   <div style="margin-top:160px; padding: 20px; color: #ddd;" class="wrapper">
+   <div style="margin-top:160px; color: #ddd;" class="wrapper">
 		<ons-icon icon="ion-ios-star" style="color: #ddd; line-height: 3px;font-size: 10px;"></ons-icon><ons-icon icon="ion-ios-star" style="color: #ffc107; line-height: 3px;"></ons-icon><ons-icon icon="ion-ios-star" style="color: #ddd; line-height: 3px; margin-right: 8px;font-size: 10px;"></ons-icon>Destaques desta Semana!
 		<div class="right">         
          <span onclick="showSeguimentos();" ><ons-icon icon="fa-search"></span>
@@ -870,7 +939,10 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
      </div>
            
    </ons-toolbar>
-   <div class="estabelecimento-header">
+   <div style="height: 123px; background-color: rgba(0,0,0,0.42); margin-bottom: -123px;">
+   <div class="estabelecimento-header2"></div>
+   <div class="estabelecimento-header"></div>
+   </div>
    <div class="orange-header wrapper">
       <ons-row align="center">
         <ons-col width="40%">
@@ -901,8 +973,8 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 			</ons-col>
 		</ons-row>
 	</div>
-	</div>
-	<div class="wrapper" style="margin-top: 130px; padding:10px; color: #ddd; font-weight: bold;"><span style="border-bottom: 1px dotted #ddd; padding-bottom: 5px;">Categorias</span></div>
+	
+	<div class="wrapper" style="margin-top: 10px; padding:10px; color: #ddd; font-weight: bold;"><span style="border-bottom: 1px dotted #ddd; padding-bottom: 5px;">Categorias</span></div>
    <ons-scroller id="category-list" style="margin-top: 10px;">      
    </ons-scroller>  
    
@@ -913,7 +985,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 <ons-page id="page-menubycategoryitem" >
    <ons-toolbar>        
      <div class="left"><ons-back-button id="menuitem-back-button"></ons-back-button></div>     
-     <div class="center white"><span id="search-text"></span></div>           
+     <div class="center white"><span id="search-text2"></span></div>           
           
      
      <div class="right">       
@@ -991,7 +1063,7 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
 <ons-page id="page-itemdisplay">
    <ons-toolbar>        
      <div class="left"><ons-back-button></ons-back-button></div>     
-     <div class="center white"><span id="search-text"></span></div>                         
+     <div class="center white"><span id="search-text2"></span></div>                         
    </ons-toolbar>
 
    <div class="item-header"></div> 
@@ -1513,18 +1585,19 @@ src="https://www.facebook.com/tr?id=142431656325667&ev=PageView&noscript=1"
      <div class="right">        
      </div>
    </ons-toolbar>
-   <div class="estabelecimento-header"></div>
+   <div style="height: 123px; background-color: rgba(0,0,0,0.42); margin-bottom: -123px;">
+   <div class="estabelecimento-header2"></div>
+   <div class="estabelecimento-header"></div></div>
    <div class="orange-header center" style="padding-bottom: 5px; margin-top: 80px;">
-           <div class="logo-wrap logo-non-auto" style="float: none; width: 70px; height: 70px;">           
+           <div class="logo-wrap logo-non-auto" style="float: none; width: 140px; height: 110px; border-radius: 40px 4px; padding-top: initial;">           
            </div>
    </div> 
    
    <div class="wrapper center">
-       <h3></h3>   
+       <h3 style="position: relative; margin-top: -210px;"></h3>   
        <h5></h5>
-       <div class="rating-stars" data-score=""></div> 
+       <div class="rating-stars" style="position: relative; margin-top: 149px;" data-score=""></div> 
        <p class="total-reviews"></p>
-
        <address></address>
    </div> 
    

@@ -272,6 +272,14 @@ overflow: hidden;
 text-overflow: ellipsis;
 display:block;
 }
+#search-text2
+{
+width: 160%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+display:block;
+}
 .restaurant-list .logo-wrap,
 .restaurant-list .logo-wrap2,
 .logo-wrap
@@ -282,6 +290,18 @@ display:block;
 margin:auto;
 background:rgba(255,255,255,1.0);
 border-radius: 40px;
+box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.5);
+overflow: hidden;
+}
+
+.restaurant-list .logo-wrap3
+{
+height: 97px;
+width: 105px;
+display:block;
+margin:auto;
+background:rgba(255,255,255,0.6);
+border-radius: 15px;
 box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.5);
 overflow: hidden;
 }
@@ -298,6 +318,15 @@ max-width:100%;
 margin:auto;
 display:block;
 max-height:100px;
+}
+.logo-wrap3 img
+{
+max-width:90%;
+margin:auto;
+display:block;
+max-height:110px;
+position: relative;
+top: 50%;
 }
 
 .restaurant-list .row,
@@ -477,7 +506,7 @@ color: #fff;
 }
 .item-header{
 height:170px;
-background:#fff;
+background:rgba(255,255,255,0.69);
 background-repeat: no-repeat !important;
 background-size: contain !important;
 background-position:center !important;

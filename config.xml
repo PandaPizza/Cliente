@@ -46,7 +46,7 @@
     </gap:plugin>
     
     <gap:plugin name="cordova-plugin-buildinfo" source="npm" spec="1.1.0"  />
-	<gap:plugin name="cordova-plugin-market" source="npm" />	 
+    <gap:plugin name="cordova-plugin-market" source="npm" />	 
 		
     <gap:config-file platform="ios" target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
         <string>My custom message for always using location.</string>

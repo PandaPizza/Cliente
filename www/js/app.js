@@ -159,22 +159,35 @@ $( document ).on( "keyup", ".numeric_only", function() {
 
 ons.bootstrap();  
 ons.ready(function() {
-	
 	dump('ready');
 	
 		/*Atualização Master Hub (Atualiza Versão do Android)*/
-		   versao_aplicativo = getStorage("versao_aplicativo");
-	       dump("versao_aplicativo=>"+versao_aplicativo);
-		   versao_aplicativo_code = getStorage("versao_aplicativo_code");
-		   dump("versao_aplicativo_code=>"+versao_aplicativo_code);
-	       if(versao_aplicativo!=getStorage("versao") || versao_aplicativo_code!=getStorage("versaoCode")){
-				ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
-    			alertDialog.show();
-  				});		
+if(!isDebug()){
+			var versao = getStorage('versao');
+			var versaoCode = getStorage('versaoCode');
+			var ver_aplicativo = getStorage('versao_aplicativo');
+			var ver_aplicativo_code = getStorage('versao_aplicativo_code');
+		   	versao_aplicativo = getStorage("versao_aplicativo");
+	       	dump("versao_aplicativo=>"+versao_aplicativo);
+		   	versao_aplicativo_code = getStorage("versao_aplicativo_code");
+		   	dump("versao_aplicativo_code=>"+versao_aplicativo_code);
+	if(typeof versao_aplicativo===getStorage("versao") || versao_aplicativo_code===getStorage("versaoCode")){
 	       } else {
-	       	  
-	       }
-
+		var forcar_atualizar = getStorage("forcar_atualizar");
+	    dump("forcar_atualizar=>"+forcar_atualizar);
+		if(forcar_atualizar==='yes'){
+	       	  ons.createAlertDialog('alerta-atualizacao-forcada.html').then(function(alertDialog) {
+    			alertDialog.show();
+  				});
+		   } else {
+	       	  ons.createAlertDialog('alerta-atualizacao.html').then(function(alertDialog) {
+    			alertDialog.show();
+  				});
+		}
+		   
+	}
+		   
+}
 	/*Fim da Atualização*/
 		
 	if(isDebug()){
@@ -468,7 +481,7 @@ document.addEventListener("pageinit", function(e) {
 	      break;
 		
 		case "searchresult-page":	
-		$("#search-text").html( getStorage("search_address") );
+		$("#search-text2").html( getStorage("search_address") );
 		callAjax("search","address="+ getStorage("search_address") );	
 								
 		break;
@@ -477,7 +490,7 @@ document.addEventListener("pageinit", function(e) {
 		
 		var cuisine_type='';
 		
-		$("#search-text").html( getStorage("search_address") );
+		$("#search-text2").html( getStorage("search_address") );
 		callAjax("search","address="+ getStorage("search_address")+"&cuisine_type="+cuisine_type+
 		"&restaurant_name="+ restaurant_name);
 		break;
@@ -542,13 +555,76 @@ document.addEventListener("pageinit", function(e) {
 		
 		  break;
 		  
+		  /*Atualização Master Hub (Atualização do aplicativo e Página Personalizada)*/
 		  case "page-atualizar":
+		  
+		var versao = getStorage('versao');
+		var versaoCode = getStorage('versaoCode');
+		var ver_aplicativo = getStorage('versao_aplicativo');
+		var ver_aplicativo_code = getStorage('versao_aplicativo_code');
+		
+		var htm='';
+		
+		if(!isDebug()){
+		   versao_aplicativo = getStorage("versao_aplicativo");
+	       dump("versao_aplicativo=>"+versao_aplicativo);
+		   versao_aplicativo_code = getStorage("versao_aplicativo_code");
+		   dump("versao_aplicativo_code=>"+versao_aplicativo_code);
+	       if(typeof versao_aplicativo===getStorage("versao") || versao_aplicativo_code===getStorage("versaoCode")){
+
+		htm+='<h4 style="text-align: center;" class="trn" data-trn-key="acabei_de_atualizar_o_aplicativo">';
+		htm+='Você já atualizou para a versão mais recente!';
+		htm+='</h4>';
+
+	       } else {
+			   
+		htm+='<h4 style="text-align: center;" class="trn" data-trn-key="atualizamos_para_melhor">';
+		htm+='Atualizamos para um melhor funcionamento!';
+		htm+='</h4>';
+		htm+='<p class="trn" style="text-align: center;" data-trn-key="clique_abaixo_para_atualizar">';
+		htm+='Clique no botão abaixo para fazer a atualização do aplicativo direto da Google Play!';
+		htm+='</p>';
+		htm+='<button class="btnz whats" onClick="AtualizarApp()" >';
+		htm+='<i class="fa fa-download fa-2x"></i>';
+		htm+='<span class="trn" data-trn-key="btn_atualizar">  Atualizar</span>';
+		htm+='</button>';
+		
+	       }
+		}
+		
+		
+		htm+='<p style="text-align: center;" class="trn" data-trn-key="sua_versao_instalada"> Versão Instalada no seu aparelho </p>';
+		htm+='<h4 style="text-align: center">';
+		htm+=versao+' - ('+versaoCode+')';
+		htm+='</h4>';
+		htm+='<br>';
+		htm+='<p style="text-align: center;" class="trn" data-trn-key="versao_da_atualizacao">';
+		htm+=' Versão Atualizada';
+		htm+='</p>';
+		htm+='<h4 style="text-align: center">';
+		htm+=ver_aplicativo+' - ('+ver_aplicativo_code+')';
+		htm+='</h4>';
+		
+	       if(typeof versao_aplicativo===getStorage("versao") || versao_aplicativo_code===getStorage("versaoCode")){
+		
+		htm+='<button class="btnz whats" onClick="setHome();" >';
+		htm+='<i class="fa fa-thumbs-up fa-2x"></i>';
+		htm+='<span class="trn" data-trn-key="btn_atualizou">  Acabei de Atualizar</span>';
+		htm+='</button>';
+		
+		   } else {
+			   
+		   }
+		
+		createElement('versao-instalada',htm);	
+		translatePage();
 		
 		  break;
 		  
 		  case "showHome-help":
 		  
 		  break;
+		   /*Fim da atualização*/
 		   
 		case "page-profile":
 		  callAjax('getProfile',
@@ -1725,11 +1801,15 @@ function callAjax(action,params)
 				   /*versao_aplicativo*/
 				   setStorage("versao_aplicativo",data.details.settings.versao_aplicativo);
 				   setStorage("versao_aplicativo_code",data.details.settings.versao_aplicativo_code);
+				   if(!isDebug()){
 				   setStorage("versao",BuildInfo.version);
 				   setStorage("versaoCode",BuildInfo.versionCode);
+				   }
 
 				   /*link_google_play*/
 				   setStorage("link_google_play",data.details.settings.link_google_play);
+				   /*link_apple_store*/
+				   setStorage("link_apple_store",data.details.settings.link_apple_store);
 			/*Fim da atualização*/
 			
 			       /*facebook_flag*/
@@ -2530,7 +2610,8 @@ function menuCategoryResult(data)
 	}
 	$("#menucategory-page .restauran-title").text(data.restaurant_name);
 	/* Atualização João Neves (Pede.ai) Cabeçalho App dentro do menu do estabelecimento */
-	$("#menucategory-page .estabelecimento-header").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_bg+'); background-size: cover; padding-top: 45px; box-sizing: border-box; position: fixed; top: 0px; left: 0px; right: 0px; height: 165px;');
+	$("#menucategory-page .estabelecimento-header2").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_bg+'); background-size: 108%; padding-bottom: 42px; box-sizing: border-box; position: fixed; top: 0px; left: 0px; right: 0px;');
+	$("#menucategory-page .estabelecimento-header").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_bg+'); background-size: cover; box-sizing: border-box; position: relative; top: -42px; left: 0px; right: 0px; height: 165px; z-index: -1;');
 	/* Fim da Atualização */
 	
 	$("#menucategory-page .rating-stars").attr("data-score",data.ratings.ratings);
@@ -2554,7 +2635,7 @@ function menuCategoryResult(data)
              val.cat_id+','+val.merchant_id+');"><img src="http://kabrob.com.br/upload/'+val.photo+'" class="imgcategoria"></img> '+val.category_name+'</ons-list-item>';
 			} else {
 				htm+='<ons-list-item modifier="tappable" class="row" onclick="loadmenu('+
-				val.cat_id+','+val.merchant_id+');"><img src="http://kabrob.com.br/upload/mobile-default-logo.png" class="imgcategoria"></img> '+val.category_name+'</ons-list-item>';
+				val.cat_id+','+val.merchant_id+');"><img src="'+data.logo+'" class="imgcategoria"></img> '+val.category_name+'</ons-list-item>';
 			}
 
 		});	
@@ -2717,15 +2798,15 @@ html+='onclick="autoAddToCart('+ "'"+val.item_id+"'," +  "'"+item_auto_price+"',
              
          } else {
          	
-             html+='<ons-col class="col-image" width="35%">';
-                html+='<div class="logo-wrap2" >';
+             html+='<ons-col class="col-image" width="29%">';
+                html+='<div class="logo-wrap3" >';
                   html+='<div class="img_loaded" >';
-                  html+='<img src="'+val.photo+'" />';
+                  html+='<img src="'+data.merchant_info.logo+'" />';
                   html+='</div>';
                 html+='</div>';
              html+='</ons-col>';
              
-                html+='<ons-col class="col-description" width="65%" style="border-bottom: 0px solid #333;">';
+                html+='<ons-col class="col-description" width="65%" style="border-bottom: 0px solid #333; margin-left: 12px;">';
                 html+='<p class="restauran-title concat-text" style="margin-top: 5px;">'+val.item_name+'</p>';
                 html+='<p class="" style="margin-top: 5px; font-size: 13px; margin-bottom: 15px;">'+val.item_description+'</p>';   
                                      
@@ -4159,7 +4240,8 @@ function showMerchantInfo(data)
 {
 	dump(data);
 	/* Atualização João Neves (Pede.ai) Cabeçalho App dentro do menu do estabelecimento */
-	$("#page-merchantinfo .estabelecimento-header").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_info.merchant_bg+'); background-size: cover; background-size: cover; padding-top: 45px; box-sizing: border-box; position: fixed; top: 0px; left: 0px; right: 0px; height: 165px; z-index: -1;');
+	$("#page-merchantinfo .estabelecimento-header2").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_info.merchant_bg+'); background-size: 108%; padding-bottom: 42px; box-sizing: border-box; position: fixed; top: 0px; left: 0px; right: 0px;');
+	$("#page-merchantinfo .estabelecimento-header").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_info.merchant_bg+'); background-size: cover; box-sizing: border-box; position: relative; top: -42px; left: 0px; right: 0px; height: 165px; z-index: -1;');
 	/* Fim da Atualização */
 	$("#page-merchantinfo h3").html(data.merchant_info.restaurant_name);
 	$("#page-merchantinfo h5").html(data.merchant_info.cuisine);
@@ -5985,7 +6067,7 @@ function isDebug()
 {	
 	//on/off
 	//return true;
-	return false;
+	return true;
 }
 
 var rzr_successCallback = function(payment_id) {
