@@ -161,7 +161,7 @@ ons.bootstrap();
 ons.ready(function() {
 	dump('ready');
 	
-		/*AtualizaÁ„o Master Hub (Atualiza Vers„o do Android)*/
+		/*Atualiza√ß√£o Master Hub (Atualiza Vers√£o do Android)*/
 if(!isDebug()){
 			var versao = getStorage('versao');
 			var versaoCode = getStorage('versaoCode');
@@ -188,7 +188,7 @@ if(!isDebug()){
 	}
 		   
 }
-	/*Fim da AtualizaÁ„o*/
+	/*Fim da Atualiza√ß√£o*/
 		
 	if(isDebug()){
 		removeStorage("search_address");		
@@ -363,7 +363,7 @@ document.addEventListener("pageinit", function(e) {
 	dump("pageinit");	
 	dump("pagname => "+e.target.id);
 
-	/*AtualizaÁ„o Master Hub (Oculta Categorias e Mostra um Bot„o)*/
+	/*Atualiza√ß√£o Master Hub (Oculta Categorias e Mostra um Bot√£o)*/
 		   var busca_categoria = getStorage("busca_categoria");
 	       dump("busca_categoria=>"+busca_categoria);
 	       if(busca_categoria!='yes'){
@@ -375,7 +375,7 @@ document.addEventListener("pageinit", function(e) {
 			  $(".botao-busca").hide();
 	       	  
 	       }
-	/*Fim da AtualizaÁ„o*/
+	/*Fim da Atualiza√ß√£o*/
 			
 	switch (e.target.id)
 	{		
@@ -524,7 +524,7 @@ document.addEventListener("pageinit", function(e) {
 	var codigo_das_ofertas = getStorage("codigo_das_ofertas");
 	createElement('codigo-ofertas',codigo_das_ofertas);	
 
-			// Nossa Miss„o vindo do Admin
+			// Nossa Miss√£o vindo do Admin
 	var codigo_nossa_missao = getStorage("codigo_nossa_missao");
 	createElement('codigo-nossa-missao',codigo_nossa_missao);	
 
@@ -532,7 +532,7 @@ document.addEventListener("pageinit", function(e) {
 	var codigo_trabalhe_conosco = getStorage("codigo_trabalhe_conosco");
 	createElement('codigo-trabalhe-conosco',codigo_trabalhe_conosco);	
 
-			// Menu RodapÈ vindo do Admin
+			// Menu Rodap√© vindo do Admin
 	var codigo_menu_rodape = getStorage("codigo_menu_rodape");
 	createElement('codigo-menu-rodape',codigo_menu_rodape);	
 
@@ -555,7 +555,7 @@ document.addEventListener("pageinit", function(e) {
 		
 		  break;
 		  
-		  /*AtualizaÁ„o Master Hub (AtualizaÁ„o do aplicativo e P·gina Personalizada)*/
+		  /*Atualiza√ß√£o Master Hub (Atualiza√ß√£o do aplicativo e P√°gina Personalizada)*/
 		  case "page-atualizar":
 		  
 		var versao = getStorage('versao');
@@ -573,7 +573,7 @@ document.addEventListener("pageinit", function(e) {
 	       if(typeof versao_aplicativo===getStorage("versao") || versao_aplicativo_code===getStorage("versaoCode")){
 
 		htm+='<h4 style="text-align: center;" class="trn" data-trn-key="acabei_de_atualizar_o_aplicativo">';
-		htm+='VocÍ j· atualizou para a vers„o mais recente!';
+		htm+='Voc√™ j√° atualizou para a vers√£o mais recente!';
 		htm+='</h4>';
 
 	       } else {
@@ -582,7 +582,7 @@ document.addEventListener("pageinit", function(e) {
 		htm+='Atualizamos para um melhor funcionamento!';
 		htm+='</h4>';
 		htm+='<p class="trn" style="text-align: center;" data-trn-key="clique_abaixo_para_atualizar">';
-		htm+='Clique no bot„o abaixo para fazer a atualizaÁ„o do aplicativo direto da Google Play!';
+		htm+='Clique no bot√£o abaixo para fazer a atualiza√ß√£o do aplicativo direto da Google Play!';
 		htm+='</p>';
 		htm+='<button class="btnz whats" onClick="AtualizarApp()" >';
 		htm+='<i class="fa fa-download fa-2x"></i>';
@@ -593,13 +593,13 @@ document.addEventListener("pageinit", function(e) {
 		}
 		
 		
-		htm+='<p style="text-align: center;" class="trn" data-trn-key="sua_versao_instalada"> Vers„o Instalada no seu aparelho </p>';
+		htm+='<p style="text-align: center;" class="trn" data-trn-key="sua_versao_instalada"> Vers√£o Instalada no seu aparelho </p>';
 		htm+='<h4 style="text-align: center">';
 		htm+=versao+' - ('+versaoCode+')';
 		htm+='</h4>';
 		htm+='<br>';
 		htm+='<p style="text-align: center;" class="trn" data-trn-key="versao_da_atualizacao">';
-		htm+=' Vers„o Atualizada';
+		htm+=' Vers√£o Atualizada';
 		htm+='</p>';
 		htm+='<h4 style="text-align: center">';
 		htm+=ver_aplicativo+' - ('+ver_aplicativo_code+')';
@@ -624,7 +624,7 @@ document.addEventListener("pageinit", function(e) {
 		  case "showHome-help":
 		  
 		  break;
-		   /*Fim da atualizaÁ„o*/
+		   /*Fim da atualiza√ß√£o*/
 		   
 		case "page-profile":
 		  callAjax('getProfile',
@@ -1752,7 +1752,7 @@ function callAjax(action,params)
 			       /*pts*/
 			       setStorage("pts",data.details.settings.pts);
 			       
-			/*AtualizaÁ„o Master Hub*/
+			/*Atualiza√ß√£o Master Hub*/
 				   /*banner_topo*/
 				   setStorage("banner_topo",data.details.settings.banner_topo);
 				   
@@ -1810,7 +1810,7 @@ function callAjax(action,params)
 				   setStorage("link_google_play",data.details.settings.link_google_play);
 				   /*link_apple_store*/
 				   setStorage("link_apple_store",data.details.settings.link_apple_store);
-			/*Fim da atualizaÁ„o*/
+			/*Fim da atualiza√ß√£o*/
 			
 			       /*facebook_flag*/
 			       setStorage("facebook_flag",data.details.settings.facebook_flag);
@@ -2362,7 +2362,7 @@ function displayRestaurantResults(data , target_id)
     	                 }
     	             /*Fim Taxa de entrega*/
 					 
-					 /*Pedido minÌmo*/
+					 /*Pedido min√≠mo*/
     	              
 					   	  if (!empty(val.minimum_order)){  
 						  htm+='     <i class="fa green-color fa-money aria-hidden="true"" style="font-size: 15px;"></i>  <span class="p-small trn" data-trn-key="min_order">Min. Order</span>';
@@ -2375,7 +2375,7 @@ function displayRestaurantResults(data , target_id)
 	    	           	   });
 	    	           }
     	              htm+='</ons-col>';
-					  /*Fim Pedido minÌmo*/
+					  /*Fim Pedido min√≠mo*/
 
 					  
     	              htm+='</ons-col>'; 
@@ -2609,10 +2609,10 @@ function menuCategoryResult(data)
 		window.plugins.OneSignal.sendTag(""+keyOneSignal+"", "visita");
 	}
 	$("#menucategory-page .restauran-title").text(data.restaurant_name);
-	/* AtualizaÁ„o Jo„o Neves (Pede.ai) CabeÁalho App dentro do menu do estabelecimento */
+	/* Atualiza√ß√£o Jo√£o Neves (Pede.ai) Cabe√ßalho App dentro do menu do estabelecimento */
 	$("#menucategory-page .estabelecimento-header2").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_bg+'); background-size: 108%; padding-bottom: 42px; box-sizing: border-box; position: fixed; top: 0px; left: 0px; right: 0px;');
 	$("#menucategory-page .estabelecimento-header").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_bg+'); background-size: cover; box-sizing: border-box; position: relative; top: -42px; left: 0px; right: 0px; height: 165px; z-index: -1;');
-	/* Fim da AtualizaÁ„o */
+	/* Fim da Atualiza√ß√£o */
 	
 	$("#menucategory-page .rating-stars").attr("data-score",data.ratings.ratings);
 	initRating();
@@ -4239,15 +4239,15 @@ function placeOrder()
 function showMerchantInfo(data)
 {
 	dump(data);
-	/* AtualizaÁ„o Jo„o Neves (Pede.ai) CabeÁalho App dentro do menu do estabelecimento */
+	/* Atualiza√ß√£o Jo√£o Neves (Pede.ai) Cabe√ßalho App dentro do menu do estabelecimento */
 	$("#page-merchantinfo .estabelecimento-header2").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_info.merchant_bg+'); background-size: 108%; padding-bottom: 42px; box-sizing: border-box; position: fixed; top: 0px; left: 0px; right: 0px;');
 	$("#page-merchantinfo .estabelecimento-header").attr("style",'background-image: url(http://kabrob.com.br/upload/'+data.merchant_info.merchant_bg+'); background-size: cover; box-sizing: border-box; position: relative; top: -42px; left: 0px; right: 0px; height: 165px; z-index: -1;');
-	/* Fim da AtualizaÁ„o */
+	/* Fim da Atualiza√ß√£o */
 	$("#page-merchantinfo h3").html(data.merchant_info.restaurant_name);
 	$("#page-merchantinfo h5").html(data.merchant_info.cuisine);
-	/* AtualizaÁ„o Jo„o Neves (Pede.ai) CabeÁalho App dentro do menu do estabelecimento */
+	/* Atualiza√ß√£o Jo√£o Neves (Pede.ai) Cabe√ßalho App dentro do menu do estabelecimento */
 	$("#page-merchantinfo address").html(data.merchant_info.address+ "<br><br>" + data.merchant_info.merchant_information);
-	/* Fim da AtualizaÁ„o */
+	/* Fim da Atualiza√ß√£o */
 	$("#page-merchantinfo .rating-stars").attr("data-score",data.merchant_info.ratings.ratings);	
 	if (!empty(data.reviews)){
 	   $(".total-reviews").html(data.reviews.total_review + " "+ getTrans("reviews",'reviews') );
@@ -4770,7 +4770,7 @@ function modifyAddressBook(id)
     // Adicionando Busca por CEP
     
     function limpa_formulario_cep() {
-            //Limpa valores do formul·rio de cep.
+            //Limpa valores do formul√°rio de cep.
             document.getElementById('rua').value=("");
             document.getElementById('bairro').value=("");
             document.getElementById('cidade').value=("");
@@ -4787,21 +4787,21 @@ function modifyAddressBook(id)
             document.getElementById('uf').value=(conteudo.uf);
         } //end if.
         else {
-            //CEP n„o Encontrado.
+            //CEP n√£o Encontrado.
             limpa_formulario_cep();
-            alert("CEP n„o encontrado.");
+            alert("CEP n√£o encontrado.");
         }
     }
         
     function pesquisacep(valor) {
 
-        //Nova vari·vel "cep" somente com dÌgitos.
+        //Nova vari√°vel "cep" somente com d√≠gitos.
         var cep = valor.replace(/\D/g, '');
 
         //Verifica se campo cep possui valor informado.
         if (cep != "") {
 
-            //Express„o regular para validar o CEP.
+            //Express√£o regular para validar o CEP.
             var validacep = /^[0-9]{8}$/;
 
             //Valida o formato do CEP.
@@ -4820,18 +4820,18 @@ function modifyAddressBook(id)
                 //Sincroniza com o callback.
                 script.src = 'http://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
 
-                //Insere script no documento e carrega o conte˙do.
+                //Insere script no documento e carrega o conte√∫do.
                 document.body.appendChild(script);
 
             } //end if.
             else {
-                //cep È inv·lido.
+                //cep √© inv√°lido.
                 limpa_formulario_cep();
-                alert("Formato de CEP inv·lido.");
+                alert("Formato de CEP inv√°lido.");
             }
         } //end if.
         else {
-            //cep sem valor, limpa formul·rio.
+            //cep sem valor, limpa formul√°rio.
             limpa_formulario_cep();
         }
     };
@@ -6067,7 +6067,7 @@ function isDebug()
 {	
 	//on/off
 	//return true;
-	return false;
+	return true;
 }
 
 var rzr_successCallback = function(payment_id) {
