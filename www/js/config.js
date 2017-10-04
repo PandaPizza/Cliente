@@ -1,7 +1,7 @@
 /*Mobile App Configuration*/
 
 var krms_config ={	
-	'ApiUrl' : "http://piloto.kabrob.com.br/mobileapp/api",
+	'ApiUrl' : "http://www.kabrob.com.br/mobileapp/api",
 	'DialogDefaultTitle' : "Panda Pizza",
 	'pushNotificationSenderid' : "832441958592",
 	'facebookAppId' : "1321224421271929",
