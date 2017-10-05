@@ -1,0 +1,1664 @@
+.load {
+  posição : relativa ;
+  margem : 50 px  auto ;
+  largura : 100 px ;
+  altura : 80 px ;
+}
+
+.imgcategoria {
+largura : 62 px ;
+altura : 62 px ;
+vertical-align : middle ;
+}
+
+.gear {
+  posição : absoluta ;
+  índice z : -10 ;
+  largura : 40 px ;
+  altura : 40 px ;
+  -webkit-animation : spin 5 s  infinito ;
+          animação : gire 5 s  infinito ;
+}
+
+.two {
+  esquerda : 40 px ;
+  largura : 80 px ;
+  altura : 80 px ;
+  -webkit-animation : spin-reverse 5 s  infinito ;
+          animação : spin-reverse 5 s  infinito ;
+}
+
+.Three {
+  topo : 45 px ;
+  esquerda : -10 px ;
+  largura : 60 px ;
+  altura : 60 px ;
+}
+
+@ -webkit-keyframes  spin {
+  50% {
+    -webkit-transform : rotate ( 360 deg );
+            transformar : girar ( 360 graus );
+  }
+}
+
+@keyframes  spin {
+  50% {
+    -webkit-transform : rotate ( 360 deg );
+            transformar : girar ( 360 graus );
+  }
+}
+@ -webkit-keyframes  spin-reverse {
+  50% {
+    -webkit-transform : rotate ( -360 deg );
+            transformar : girar ( -360 graus );
+  }
+}
+@keyframes  spin-reverse {
+  50% {
+    -webkit-transform : rotate ( -360 deg );
+            transformar : girar ( -360 graus );
+  }
+}
+.lil-circle {
+  posição : absoluta ;
+  radio de fronteira : 50 % ;
+  caixa-sombra : inserção  0  0  10 px  2 px  cinza , 0  0  50 px  branco ;
+  largura : 100 px ;
+  altura : 100 px ;
+  opacidade : .65 ;
+}
+
+
+
+formulário {
+    exibição : bloco ;
+    margin-top : 0 em ;
+	preenchimento : 10 px ;
+
+}
+
+.wrapper {
+borda : 0 px  vermelho sólido  ;
+preenchimento : 8 px ;
+}
+.wrapper3 {
+borda : 0 px  vermelho sólido  ;
+
+}
+
+.wrapper-white {
+background : #fff ;
+preenchimento : 15 px  8 px ;
+}
+
+.center {
+texto-alinhamento : centro ;
+}
+.field-section {
+preenchimento : 8 px ;
+}
+.home-header ,
+.orange-header
+{
+largura máxima : 100 % ;
+fundo : transparente ;
+cor : #fff ;
+padding-top : 10 px ;
+padding-bottom : 15 px ;
+}
+.orange-header {
+preenchimento-esquerda : 8 px ;
+padding-right : 8 px ;
+}
+
+.home-header  img ,
+.full-image
+{
+exibição : bloco ;
+margem : auto ;
+largura máxima : 70 % ;
+}
+.navigation-bar {
+background : rgba ( 122 , 58 , 60 , 0,53 );
+cor : #fff ;
+fronteira : nenhuma ;
+}
+
+.white ,
+.toolbar-button ,
+.ons-back-button__icon ,
+.restauran-title.white
+{
+cor : # d4d4d;
+}
+
+.green ,
+.icon-verde ,
+.myfa-check
+{
+cor : # 00B279 ;
+}
+
+
+.button.green-btn {
+background : # 00B279 ;
+    raio de borda : 12 px ;
+    largura : 100 % ;
+}
+
+.button.blue-btn {
+background : # 3B5998 ;
+raio de borda : 12 px ;
+}
+
+.pad20 {
+preenchimento : 20 px ;
+}
+
+.pad25 {
+preenchimento : 25 px ;
+}
+
+.padtop25 {
+padding-top : 25 px ;
+padding-bottom : 25 px ;
+}
+
+.tab-bar {
+background : # 222222 ;
+}
+.clear {
+claro : ambos ;
+}
+.search-btn {
+posição : absoluta ;
+topo : 3 px ;;
+direito : 15 px ;
+}
+
+.home-page ,
+.filter-options
+{
+índice z : 10 ;
+posição : relativa ;
+}
+
+/ * * menu backround * /
+.page - menu-page__background {
+/ * background-color: # 333;
+cor branca; * /
+/ * background-color: # 363535; cor: # 868686; * /
+cor de fundo : # F2F2F3 ;
+cor : # 333 ;
+}
+
+.main-menu-list ,
+.bottom-menu-item : primeiro filho ,
+.bottom-menu-item
+{
+/ * border-color: # 393939; * /
+/ * border-color: # 4C4C4C;
+cor: #acacab; * /
+
+/ * border-color: # DFDFE0; * /
+/ * border-bottom: 1px sólido # DFDFE0; * /
+cor : # 333 ;
+
+cor de fundo : transparente ;
+background-image : none  ! important ;
+tamanho da fonte : 15 px ;
+}
+
+.main-menu-list  .list__item {
+borda inferior : 0 px  sólido  # DFDFE0 ;
+cor : #ddd ;
+}
+
+.bottom-menu-item  span {
+padding-left : 10 px ;
+}
+.right {
+flutuador : direito ;
+}
+.text-right {
+text-align : right ;
+}
+
+.passter-options  span ,
+.filter-options  .checkbox ,
+.location-options  .radio-button ,
+.p-normal.pts_earn_label ,
+# página-pts  .p-normal ,
+# page-pts-details  .p-normal ,
+.p-dim
+{
+cor : #fff ;
+}
+
+.results-header {
+background : # 00B279 ;
+cor : #fff ;
+texto-alinhamento : centro ;
+padding-top : 14 px ;
+padding-bottom : 14 px ;
+font-size : 14 px ;
+índice z : 11 ;
+text-transform : maiúscula ;
+}
+
+.arrow_box { position : relative ; background : # 222 ; topo : 10 px ; tamanho da fonte : 12 px ; caixa-sombra : 0  -5 px  7 px  -5 px  # 000 , 0  3 px  7 px  -2 px  # 000 ; } .arrow_box : depois de { display : none ; topo : 100 % ;esquerda : 50 % ; borda : sólida  transparente ; conteúdo : "  " ; altura : 0 ; largura : 0 ; posição : absoluta ; eventos de ponteiro : nenhum ; cor da borda : rgba ( 0 , 178 , 121 , 0 ); border-top-color : # 00B279 ; largura : 8 px; margem esquerda : -8 px ; }
+
+.modal {
+background : rgba ( 114 , 114 , 114 , 0,77 );
+}
+.modal__content {
+rgba (114,114,114,0,77);
+}
+.checkbox  >  input [ type = " checkbox " ] : verificado  +  .checkbox__checkmark : antes de {
+    background : rgba ( 190 , 23 , 23 , 0,77 );
+    borda : 1 px  rgba sólido  ( 190 , 23 , 23 , 0,77 );
+}
+.radio-button  >  input [ type = " radio " ] : verificado  +  .radio-button__checkmark {
+    background : rgba ( 190 , 23 , 23 , 0,77 );
+    borda : 1 px  rgba sólido  ( 190 , 23 , 23 , 0,77 );
+}
+# search-text ,
+.concat-text
+{
+largura : 100 % ;
+espaço em branco : nowrap ;
+transbordamento : oculto ;
+transbordamento de texto : elipses ;
+exibição : bloco ;
+}
+# search-text2
+{
+largura : 160 % ;
+espaço em branco : nowrap ;
+transbordamento : oculto ;
+transbordamento de texto : elipses ;
+exibição : bloco ;
+}
+.restaurant-list  .logo-wrap ,
+.restaurant-list  .logo-wrap2 ,
+.logo-wrap
+{
+altura : 70 px ;
+largura : 70 px ;
+exibição : bloco ;
+margem : auto ;
+background : rgba ( 255 , 255 , 255 , 1.0 );
+limite de borda : 40 px ;
+caixa-sombra : -1 px  1 px  4 px  2 px  rgba ( 0 , 0 , 0 , 0.5 );
+transbordamento : oculto ;
+}
+
+.restaurant-list  .logo-wrap3
+{
+altura : 97 px ;
+largura : 105 px ;
+exibição : bloco ;
+margem : auto ;
+background : rgba ( 255 , 255 , 255 , 0,6 );
+raio de borda : 15 px ;
+caixa-sombra : -1 px  1 px  4 px  2 px  rgba ( 0 , 0 , 0 , 0.5 );
+transbordamento : oculto ;
+}
+
+
+.logo-wrap.logo-non-auto {
+flutuador : esquerda ;
+}
+
+.logo-wrap  img ,
+.logo-wrap2  img
+{
+largura máxima : 100 % ;
+margem : auto ;
+exibição : bloco ;
+max-height : 100 px ;
+}
+.logo-wrap3  img
+{
+largura máxima : 90 % ;
+margem : auto ;
+exibição : bloco ;
+max-height : 110 px ;
+posição : relativa ;
+topo : 50 % ;
+}
+
+.restaurant-list  .row ,
+.review-list  .row ,
+.list-header
+{
+padding-top : 8 px ;
+padding-bottom : 8 px ;
+}
+.restaurant-list  p ,
+.small-font-dim ,
+# page-receipt  .wrapper  p ,
+# page-merchantinfo  .wrapper  p ,
+endereço ,
+.list-dim-text  .list__item ,
+# page-booking-ty  .wrapper  p ,
+.settings-list
+{
+altura da linha : 1 ;
+font-size : 14 px ;
+cor : #fff ;
+margem : 8 px  0 ;
+font-style : normal ;
+}
+
+# página-itemdisplay  p .description ,
+.onsen-display  p .description
+{
+altura da linha : 1 ;
+font-size : 14 px ;
+margem : 8 px  0 ;
+font-style : normal ;
+cor : preto ;
+}
+
+
+.small-font-dim-smaller ,
+.small-font-dim.small-font-dim-small
+{
+tamanho da fonte : 12 px ;
+}
+
+.col-imagem ,
+.col-description
+{
+altura da linha : normal ;
+border-bottom : 0 px  sólido  # 333 ;
+}
+.restauran-title ,
+.restaurant-list  .restauran-title ,
+.title ,
+.total ,
+.total_value ,
+# page-merchantinfo  h3 ,
+# page-merchantinfo  h5 ,
+# page-prelogin  h4 ,
+# page-orders  .col-orders ,
+# página-login  h4 ,
+.p-normal
+{
+font-weight : normal ;
+
+margem : 0 ;
+tamanho da fonte : 18 px ;
+}
+
+# page-merchantinfo  h5 {
+font-size : 17 px ;
+margem : 5 px  0  8 px ;
+}
+
+.total_value {
+font-size : 20 px ;
+font-weight : bold ;
+cor : # 000 ;
+}
+
+.p-pequeno ,
+.restaurant-list  p .p-small
+{
+tamanho da fonte : 12 px ;
+cor : #fff ;
+}
+.bold {
+font-weight : 800 ;
+}
+.border-left {
+fronteira-esquerda : 1 px  sólido  # 666 ;
+preenchimento-esquerda : 8 px ;
+}
+
+-list .restaurant  .list-item-contentores : nth-child ( mesmo ) {
+/ * background: # F7F7F7; * /
+}
+.notification.open
+{
+background : # 098F33 ;
+espaçamento entre letras : 1 px ;
+font-size : 13 px ;
+font-weight : bold ;
+text-transform : maiúscula ;
+cor : #ffffff ;
+largura : 60 % ;
+}
+.notification : empty {
+  exibir : nenhum ;
+}
+
+.notification.close
+{
+background : # D00C0C ;
+espaçamento entre letras : 1 px ;
+font-size : 13 px ;
+font-weight : bold ;
+text-transform : maiúscula ;
+cor : #ffffff ;
+largura : 75 % ;
+}
+
+
+.notification.pre-order
+{
+background : # 459ac4 ;
+espaçamento entre letras : 1 px ;
+font-size : 9 px ;
+font-weight : normal ;
+text-transform : maiúscula ;
+cor : #ffffff ;
+largura : 100 % ;
+}
+
+# categoria-list  .row {
+cor : # 262626 ;
+tamanho da fonte : 18 px ;
+}
+# categoria-list  .row {
+cor : #ddd ;
+tamanho da fonte : 15 px ;
+}
+
+# cart-item  .list__item {
+	caixa-sombra : nenhuma ;
+	margem inferior : 0 px ;
+}
+
+# categoria-popup  .list__item {
+	caixa-sombra : nenhuma ;
+	margem inferior : 0 px ;
+	border-bottom : 1  inserção  px # 000 ;
+	
+}
+
+#card_expiration  .list__item {
+	caixa-sombra : nenhuma ;
+	margem inferior : 0 px ;
+	border-bottom : 1  inserção  px # 000 ;
+	background : # 222 ;
+}
+
+.list-header
+{
+font-weight : normal ;
+cor : # 666 ;
+margem : 0 ;
+font-size : 17 px ;
+}
+
+.text-right {
+text-align : right ;
+}
+# preço da lista do menu ,
+preço
+{
+font-weight : bold ;
+font-size : 13 px ;
+cor : #fff ;
+}
+.item-header {
+altura : 170 px ;
+background : rgba ( 255 , 255 , 255 , 0,69 );
+background-repeat : no-repeat  ! important ;
+tamanho do fundo : conter  ! importante ;
+background-position : center  ! important ;
+}
+
+# página-itemdisplay  .title {
+limite de borda : 1 px  sólido  #DDDDDD ;
+padding-bottom : 8 px ;
+padding-top : 8 px ;
+}
+# página-itemdisplay  .title {
+tamanho da fonte : 21 px ;
+cor : vermelho ;
+}
+
+# preço da página-item ,
+preço de exibição de caixa
+{
+font-size : 14 px ;
+cor : # 000 ;
+}
+
+.grey-border-top {
+border-top : 1 px  sólido  #DDDDDD ;
+}
+.grey-border-top2 {
+border-top : 2 px  sólido  #DDDDDD ;
+}
+.grey-border-bottom {
+limite de borda : 1 px  sólido  #DDDDDD ;
+}
+
+# página-itemdisplay  .grey-border-bottom {
+borda inferior : 2 px  sólido  # ec1414 ;
+}
+# página-itemdisplay  .qty {
+largura : 100 % ;
+}
+
+# página-itemdisplay  p .description.item-name ,
+.onsen-display  p .description.item-name
+{
+exibir : em linha ;
+}
+
+# página-itemdisplay  .list-header ,
+.onsen-display  .list-header
+{
+padding-top : 5 px ;
+padding-bottom : 5 px ;
+}
+
+# página-itemdisplay  .radio-button__checkmark ,
+.onsen-display  .radio-button__checkmark ,
+# page-locations  .radio-button__checkmark ,
+# page-languageoptions  .radio-button__checkmark ,
+# página-  expirymonth .radio-button__checkmark ,
+{
+borda : 1 px  sólido  #ddd ;
+}
+
+.radio-button__checkmark {
+borda : 1 px  sólido  #ddd ;
+}
+
+.quantity-center {
+margem superior : 7 px ;
+text-align : right ;
+padding-right : 8 px ;
+}
+.text-left {
+texto-alinhamento : esquerda ;
+}
+.text-right {
+text-align : right ;
+}
+.text-center {
+texto-alinhamento : centro ;
+}
+.cart-total-wrap {
+margem superior : 25 px ;
+}
+
+.carrinho
+{
+font-size : 30 px ;
+}
+
+.cart-num ,
+# carrinho de página  .numeric_only ,
+# carrinho de página  .qty ,
+.order-apply-changes ,
+.rap-del-wrap ,
+.order-change-wrapper ,
+.payon-delivery-wrapper ,
+.logout menu ,
+.delete-endereços ,
+.select-addressbook ,
+.page-login-fb ,
+.voucher-wrap ,
+.remove-voucher ,
+.mobile-verification-msg ,
+.email-verification-msg ,
+.pts_pts_cancel
+{
+exibir : nenhum ;
+}
+
+.text-big ,
+# page-merchantinfo  h3
+{
+font-size : 20 px ;
+}
+
+.total-amount {
+margem : auto ;
+}
+# carrinho de página  .text-big ,
+# página-checkoutsignup  .text-big ,
+# página-envio  .text-big ,
+# página-pagamentooption  .text-big ,
+{
+margem superior : 7 px ;
+}
+
+.onsen-display  .row-no-border ,
+.row-no-border
+{
+fronteira : nenhuma ;
+}
+.small-input {
+largura : 60 px ;
+}
+
+# carrinho-item  .line-separator {
+border-bottom : none ;
+altura da linha : 10 px ;
+min-height : 10 px ;
+}
+
+.delete-item {
+background : #DEDEDE ;
+cor : #FFFFFF ;
+tamanho da fonte : 15 px ;
+font-weight : normal ;
+altura da linha : 20 px ;
+estofamento : 4 px  8 px ;
+}
+
+preço normal do preço {
+font-weight : normal ;
+}
+.small-red-text {
+cor : # FF0000 ;
+tamanho da fonte : 12 px ;
+margem : 5 px  10 px ;
+}
+
+.delivery_date ,
+.delivery_time ,
+.field-invólucro  de entrada ,
+email de campo -envoltório
+senha do campo -wrapper
+.order_notes
+{
+largura : 100 % ;
+
+}
+.field-wrapper {
+preenchimento : 8 px  0 ;
+}
+.field-wrapper2 {
+preenchimento : 8 px  0 ;
+}
+
+.help-block.form-error {
+cor : # FF0000 ;
+exibição : bloco ;
+tamanho da fonte : 12 px ;
+text-align : right ;
+}
+
+.cod {
+cor : # 05A183 ;
+}
+.pyr {
+cor : # ec1414 ;
+}
+.paypal {
+cor : # 009CDE ;
+}
+
+# página-pagamentooption  .logo-wrap {
+altura : auto ;
+largura : 50 px ;
+margem-direita : 0 ;
+}
+
+.myfa-check {
+font-size : 100 px ;
+}
+
+preço. Desculpe ,
+# menu- preço da tabela . desconto
+{
+cor : # D4232B ;
+margem direita : 5 px ;
+text-decoration : line-through ;
+}
+.checkout-icon {
+font-size : 40 px ;
+}
+
+.list-dim-text  .list__item {
+altura da linha : normal ;
+min-height : herdar ;
+padding-bottom : 5 px ;
+padding-top : 5 px ;
+}
+
+# merchant-map ,
+#map_canvas ,
+#map_canvas_address
+{
+largura : 100 % ;
+min-height : 250 px ;
+}
+
+.review-list  .icon-user {
+font-size : 50 px ;
+cor : # 666 ;
+}
+# page-orders  .col-order-stats {
+}
+# page-orders  .col-order-stats  .notification {
+vertical-align : middle ;
+font-size : 14 px ;
+exibição : bloco em linha ;
+}
+
+# page-orders  .col-orders {
+font-size : 14 px ;
+}
+
+# page-addressbook-details  .small-font-dim {
+exibição : bloco em linha ;
+}
+.loading-screen {
+altura : 100 % ;
+posição : absoluta ;
+topo : 0 ;
+largura : 100 % ;
+background : # 101317 ;
+}
+
+.loading-screen  .inner {
+cor : #FFFFFF ;
+font-family : arial ;
+margem superior : 25 % ;
+posição : relativa ;
+texto-alinhamento : centro ;
+}
+
+.padding-left10 {
+padding-left : 10 px ;
+}
+
+.padding-left5 {
+preenchimento-esquerda : 5 px ;
+}
+
+.pad-top10 {
+padding-top : 10 px ;
+}
+
+.pad-top20 {
+padding-top : 20 px ;
+}
+
+.settings-header {
+  font-weight : 500 ;
+  font-size : 14 px ;
+  opacidade : 0,4 ;
+  preenchimento : 10 px  0  0 px  10 px ;
+  margem inferior : -4 px ;
+}
+.settings-list {
+  margem superior : 10 px ;
+}
+
+.switch-wrapper {
+borda : 1 px  vermelho sólido  ;
+}
+
+.no-connection {
+texto-alinhamento : centro ;
+padding-top : 60 px ;
+exibir : nenhum ;
+}
+
+.no-connection  # ion-wifi {
+cor : #ddd ;
+font-size : 100 px ;
+}
+.no-connection  p {
+cor : # 666 ;
+font-size : 20 px ;
+margem inferior : 10 px ;
+margem superior : 5 px ;
+}
+
+# voucher-wrap ,
+.pts-apply-points-wrap
+{
+margem inferior : 15 px ;
+}
+
+.border {
+/ * border: 1px sólido vermelho! importante; * /
+}
+
+.p-normal.pts_earn_label {
+font-size : 14 px ;
+}
+# page-pts  .p-normal
+{
+font-size : 14 px ;
+}
+
+# scroller-pts-  span de detalhes
+{
+cor : # ec1414 ;
+}
+
+.profile-pic-wrap {
+min-height : 50 px ;
+cor : #fff ;
+font-weight : 400 ;
+preenchimento : 20 px ;
+}
+
+.avatar-wrap {
+largura máxima : 70 px ;
+min-height : 70 px ;
+exibição : tabela-célula ;
+}
+.avatar-right {
+exibição : tabela-célula ;
+vertical-align : middle ;
+preenchimento-esquerda : 15 px ;
+}
+
+.avatar-wrap  img {
+largura : 70 px ;
+altura : 70 px ;
+-moz-border-radius : 50 px ;
+-webkit-border-radius : 50 px ;
+raio de borda : 50 px ;
+}
+
+# perfil da página  .avatar-wrap {
+exibição : bloco ;
+margem : auto ;
+largura máxima : 100 px ;
+min-height : 100 px ;
+}
+
+# página-perfil  .avatar-wrap  img {
+largura : 100 px ;
+altura : 100 px ;
+}
+
+# perfil da página  .profile-pic-wrap {
+estofamento : 30 px  10 px ;
+}
+
+.is-broken {
+background : url ( " images / broken.png " ) centro central sem repetição  ; 
+min-height : 24 px ;
+min-width : 24 px ;
+preenchimento : 20 px ;
+-moz-border-radius : 2 px ;
+-webkit-border-radius : 2 px ;
+raio de fronteira : 2 px ;
+-khtml-border-radius : 2 px ;
+}
+
+
+.avatar-wrap. is  -broken {
+altura : 0 ;
+largura : 0 ;
+min-height : 0 ;
+min-width : 0 ;
+preenchimento : 0 ;
+}
+.avatar-wrap  .img_loaded
+{
+altura : 40 px ;
+largura : 40 px ;
+}
+
+.addon_description {
+border-bottom : 1 px  sólido  #ddd ;
+padding-bottom : 8 px ;
+preenchimento-esquerda : 15 px ;
+padding-right : 15 px ;
+}
+
+.img_loaded  img ,
+.is-quebrado  img
+{
+exibir : nenhum ;
+}
+
+.img_loaded {
+  margem : 10 px  auto ;
+  tamanho da fonte : 6 px ;
+  posição : relativa ;
+  recuo de texto : -9999 em ;
+  border-top : 1.1 em  rgba sólido  ( 240 , 16 , 16 , 0.2 );
+  fronteira-direita : 1,1 em  rgba sólido  ( 240 , 16 , 16 , 0,2 );
+  borda inferior : 1,1 em  rgba sólido  ( 240 , 16 , 16 , 0,2 );
+  fronteira-esquerda : 1.1 em  sólido  # ec1414 ;
+  -webkit-transform : translateZ ( 0 );
+  -ms-transform : translateZ ( 0 );
+  transformar : translateZ ( 0 );
+  -webkit-animation : load8 1.1 s  linear infinito  ;
+  animação : load8 1.1 s  linear infinito  ;
+}
+.img_loaded ,
+.img_loaded : depois de {
+  radio de fronteira : 50 % ;
+  largura : 3 em ;
+  altura : 3 em ;
+}
+@ -webkit-keyframes  load8 {
+  0% {
+    -webkit-transform : rotate ( 0 deg );
+    transformar : girar ( 0 graus );
+  }
+  100% {
+    -webkit-transform : rotate ( 360 deg );
+    transformar : girar ( 360 graus );
+  }
+}
+@keyframes  load8 {
+  0% {
+    -webkit-transform : rotate ( 0 deg );
+    transformar : girar ( 0 graus );
+  }
+  100% {
+    -webkit-transform : rotate ( 360 deg );
+    transformar : girar ( 360 graus );
+  }
+}
+
+.green-color {
+cor : # 009e53 ;
+}
+
+.top10 ,
+.restaurant-list  .top10
+{
+margem superior : 10 px ;
+}
+
+.top15 {
+margem superior : 15 px ;
+}
+
+
+.top20 {
+margem superior : 20 px ;
+}
+
+/ * Carregador novo * /
+.s2 {
+  posição : absoluta ;
+  altura : 100 px ;
+  largura : 100 px ;
+  cor de fundo : transparente ;
+  topo : 50 vh ;
+  esquerda : 50 % ;
+  transformar : traduzir ( -50 % , -50 % );
+}
+
+.s1 {
+  posição : absoluta ;
+  altura : 100 px ;
+  largura : 100 px ;
+  topo : 50 vh ;
+  esquerda : 50 % ;
+  transform-origem : centro ;
+  transformar : traduzir ( -50 % , -50 % ) girar ( 45 graus );
+  cor de fundo : transparente ;
+}
+
+.bigcon {
+  posição : absoluta ;
+  altura : 95 px ;
+  largura : 95 px ;
+  topo : 50 vh ;
+  esquerda : 50 % ;
+  transform-origem : centro ;
+  transformar : traduzir ( -50 % , -50 % ) girar ( -45 graus );
+  cor de fundo : transparente ;
+  animação : bigcon 2 s  infinito  linear ;
+  atraso de animação : 0,25 s ;
+}
+
+.b {
+  radio de fronteira : 50 % ;
+  posição : absoluta ;
+}
+
+.s {
+  largura : 25 px ;
+  altura : 25 px ;
+  Animação : pequena  facilidade infinita de 2 s  ; 
+  caixa-sombra : 0 px  2 px  rgba ( 0 , 0 , 0 , 0.3 );
+   cor de fundo : # 46b9ff ;
+}
+
+.s : nth-child ( 1 ) {
+  topo : 0 % ;
+  esquerda : 0 % ;
+}
+
+.s : nth-child ( 2 ) {
+  topo : 0 % ;
+  certo : 0 % ;
+}
+
+.s : nth-child ( 3 ) {
+  certo : 0 % ;
+  inferior : 0 % ;
+}
+
+.s : nth-child ( 4 ) {
+  inferior : 0 % ;
+  esquerda : 0 % ;
+}
+
+.big {
+  largura : 20 px ;
+  altura : 20 px ;
+  raio de borda : 15 px ;
+  caixa-sombra : 0 px  0 px  10 px  # 54f7f8 , 0 px  0 px  20 px  # 54f7f8 , 0 px  0 px  30 px  # 54f7f8 , 0 px  0 px  50 px  # 54f7f8 , 0 px  0 px  60 px  # 54f7f8 ;
+  índice z : 1 ;
+  cor de fundo : # 54f7f8 ;
+  animação : bigball 1 s  linear infinito  ;
+}
+
+.sb1 {
+  atraso de animação : 1.75 s ;
+}
+.sb6 {
+  atraso de animação : -1,5 s ;
+}
+.sb2 {
+  atraso de animação : -1,25 s ;
+}
+.sb7 {
+  atraso de animação : -1 s ;
+}
+.sb3 {
+  atraso de animação : -0,75 s ;
+}
+.sb8 {
+  atraso de animação : -0,5 s ;
+}
+.sb4 {
+  atraso de animação : -0,25 s ;
+}
+.sb5 {
+  atraso de animação : -0 s ;
+}
+
+@keyframes  bigcon {
+  0% {
+    transform-origem : centro ;
+    transformar : traduzir ( -50 % , -50 % ) girar ( 45 graus );
+  }
+  100% {
+    transform-origem : centro ;
+    transformar : traduzir ( -50 % , -50 % ) rodar ( 405 graus );
+  }
+}
+
+@keyframes  small {
+  0% {
+    transformar : escala ( 1 );
+     cor de fundo : # 46b9ff ;
+  }
+  10% {
+    transformar : escala ( 1.3 );
+    cor de fundo : # 54f7f8 ;
+  }
+  15% {
+    transformar : escala ( 1 );
+  }
+  25% {
+transformar : escala ( 1 );
+     cor de fundo : # 46b9ff ;
+  }
+  100% {
+    transformar : escala ( 1 );
+     cor de fundo : # 46b9ff ;
+  }
+}
+/ * Novo carregador End * /
+
+
+
+.myloader {
+  margem : 10 px  auto ;
+  tamanho da fonte : 6 px ;
+  posição : relativa ;
+  recuo de texto : -9999 em ;
+  border-top : 1.1 em  rgba sólido  ( 240 , 16 , 16 , 0.2 );
+  fronteira-direita : 1,1 em  rgba sólido  ( 240 , 16 , 16 , 0,2 );
+  borda inferior : 1,1 em  rgba sólido  ( 240 , 16 , 16 , 0,2 );
+  fronteira-esquerda : 1.1 em  sólido  # ec1414 ;
+  -webkit-transform : translateZ ( 0 );
+  -ms-transform : translateZ ( 0 );
+  transformar : translateZ ( 0 );
+  -webkit-animation : load8 1.1 s  linear infinito  ;
+  animação : load8 1.1 s  linear infinito  ;
+}
+.myloader ,
+.myloader : após {
+  radio de fronteira : 50 % ;
+  largura : 3 em ;
+  altura : 3 em ;
+}
+@ -webkit-keyframes  load8 {
+  0% {
+    -webkit-transform : rotate ( 0 deg );
+    transformar : girar ( 0 graus );
+  }
+  100% {
+    -webkit-transform : rotate ( 360 deg );
+    transformar : girar ( 360 graus );
+  }
+}
+@keyframes  load8 {
+  0% {
+    -webkit-transform : rotate ( 0 deg );
+    transformar : girar ( 0 graus );
+  }
+  100% {
+    -webkit-transform : rotate ( 360 deg );
+    transformar : girar ( 360 graus );
+  }
+}
+
+#map_canvas_div ,
+#map_canvas_div_search ,
+#map_canvas_address ,
+#map_canvas_track
+{
+altura : 100 px ;
+largura : 100 % ;
+}
+
+.page__background.page - map-page__background {
+background : rgba ( 0 , 0 , 0 , 0 ) ! importante ;
+}
+
+
+# direção-wrap {
+fundo : 0 px ;
+posição : absoluta ;
+largura : 95 % ;
+z-index : 99999  ! importante ;
+background : #fff ;
+}
+
+.list-wrapper {
+margem : 10 px ;
+}
+
+.block {
+exibição : bloco ;
+}
+
+.int-tel-input {
+largura : 100 % ;
+}
+
+.envento ,
+.manual-address-input
+{
+exibir : nenhum ;
+}
+
+.iagree-wrap2 ,
+.manual-address-input
+{
+exibir : nenhum ;
+}
+
+.button.orange-btn {
+background : # ec1414 ;
+}
+
+.time-remains-wrap {
+background : # F6F8F7 ;
+padding-top : 15 px ;
+padding-bottom : 15 px ;
+borda inferior : 1 px  sólido  # E4E4E4 ;
+}
+
+.Reded-green {
+  margem : auto ;
+  tamanho da fonte : 10 px ;
+  posição : relativa ;
+  border-top : 1,1 em  rgba sólido  ( 0 , 178 , 121 , 0,2 );
+  fronteira-direita : 1,1 em  rgba sólido  ( 0 , 178 , 121 , 0,2 );
+  borda inferior : 1,1 em  rgba sólido  ( 0 , 178 , 121 , 0,2 );
+  fronteira-esquerda : 1.1 em  sólido  # E4F0EC ;
+  -webkit-transform : translateZ ( 0 );
+  -ms-transform : translateZ ( 0 );
+   largura da borda : 10 px ;
+}
+.rounded-verde ,
+.rounded-green : após {
+  radio de fronteira : 50 % ;
+  largura : 10 em ;
+  altura : 10 em ;
+}
+
+.Rounded-green  h2 {
+tamanho da fonte : 36 px ;
+font-weight : normal ;
+posição : absoluta ;
+texto-alinhamento : centro ;
+topo : -10 px ;
+largura : 100 % ;
+}
+
+.rounded-green  p .remaining {
+posição : absoluta ;
+texto-alinhamento : centro ;
+topo : 55 px ;
+largura : 100 % ;
+}
+
+.track-status-wrap {
+preenchimento-esquerda : 25 px ;
+padding-right : 25 px ;
+padding-top : 30 px ;
+padding-bottom : 30 px ;
+posição : relativa ;
+/ * min-height: 200px; * /
+}
+
+.track-status-wrap  ul ,
+.track-status-wrap  ul  li
+{
+margem : 0 ;
+preenchimento : 0 ;
+estilo de lista : nenhum ;
+}
+
+.track-status-wrap  ul  li {
+margem inferior : 20 px ;
+preenchimento-esquerda : 35 px ;
+posição : relativa ;
+}
+
+.track-status-wrap  p {
+font-size : 13 px ;
+cor : # 666 ;
+margem : 0 ;
+preenchimento : 0 ;
+}
+
+.track-status-wrap  h3 ,
+# driver-details-wrap  h3
+{
+tamanho da fonte : 16 px ;
+margem : 0 ;
+preenchimento : 0 ;
+font-weight : normal ;
+}
+
+.scg {
+posição : absoluta ;
+esquerda : 0 ;
+topo : 8 px ;
+largura : 20 px ;
+altura : 20 px ;
+background : # 00B279 ;
+-moz-border-radius : 50 px ;
+-webkit-border-radius : 50 px ;
+raio de borda : 50 px ;
+}
+
+.horizontal-line {
+background : # E4E4E4 ;
+altura : 100 % ;
+margem esquerda : 10 px ;
+posição : absoluta ;
+topo : 0 ;
+largura : 2 px ;
+}
+
+.page - page-track__background {
+background : #fff ;
+}
+
+.page__content.page - tracking-page__content {
+}
+
+.page__background.page - tracking-page__background {
+background : rgba ( 0 , 0 , 0 , 0 ) ! importante ;
+}
+
+
+.track_driver {
+/ * bottom: 0px;
+posição: absoluta; * /
+}
+
+# driver-details-wrap {
+fundo : -11 px ;
+posição : absoluta ;
+largura : 98 % ;
+z-index : 999999  ! importante ;
+background : #fff ;
+preenchimento : 5 px ;
+border-top : 1 px  sólido  # E4E4E4 ;
+esquerda : -10 px ;
+}
+
+# driver-details-wrap  img {
+largura máxima : 70 px ;
+max-height : 70 px ;
+radio de fronteira : 50 % ;
+}
+
+.notification.cancelled ,
+.notification.cancelado
+{
+background : # b50b18 ;
+}
+.notification.declined ,
+.notification.recusado ,
+.notification.denied  
+{
+background : # c61724 ;
+}
+.notification.successful ,
+.notification.paid ,
+.notification.approved ,
+.notification.sent ,
+.notification.enviado ,
+.notification.pago
+{
+background : # 008646 ;
+}
+.notification.delivered ,
+.notification.pronto
+{
+background : # 009e53 ;
+}
+.notificação pendente
+{
+background : # F49C00 ;
+}
+.notification.accepted ,
+.notification.aceito ,
+.notification.nownowledged
+{
+background : # 009e53 ;
+}
+.notification.inprogress ,
+.notification.preparando
+{
+background : # fc8344 ;
+}
+.notification.assigned {
+background : # fc8344 ;
+}
+.notification.started ,
+.notification.iniciado
+{
+background : # fc8344 ;
+}
+
+.map_search_field_wrap {
+background : #fff ;
+posição : relativa ;
+largura : 100 % ;
+}
+
+.map_search_field_wrap  .ons-icon {
+esquerda : 15 px ;
+posição : absoluta ;
+topo : 7 px ;
+}
+
+#search_address_geo {
+altura : 40 px ;
+preenchimento : 5 px  20 px ;
+largura : 100 % ;
+recuo de texto : 20 px ;
+}
+
+#map_canvas_address {
+posição : relativa ;
+}
+
+# menucategory-page  .restauran-title.concat-text ,
+# page-menubycategoryitem  .restauran-title.concat-text
+{
+largura máxima : 220 px ;
+espaço em branco : herdar ;
+}
+
+.page__background.page - getsettings__background
+{
+fundo : url transparente  ( " images / splash.jpg " ) centro / tampa do centro de rolagem sem repetição ;   
+}
+
+.page__background.page - page-slidingmenu__background {
+background : rgba ( 0 , 0 , 0 , 0 ) ! importante ;
+}
+
+.main-getsettings {
+margem : auto auto de 40 %  ; 
+largura máxima : 70 % ;
+}
+
+.main-getsettings  img {
+largura : 100 % ;
+altura : auto ;
+}
+
+.retry-language {
+exibir : nenhum ;
+}
+
+.icon-green {
+font-size : 30 px ;
+}
+
+.popover-mask {
+    posição : absoluta ;
+    esquerda : 0 ;
+    certo : 0 ;
+    topo : 0 ;
+    fundo : 0 ;
+    cor de fundo : rgba ( 152 , 90 , 90 , 0,7 );
+}
+
+.text-input - underbar {
+    preenchimento : 0 ;
+    margem : 0 ;
+    fonte : herdar ;
+    cor : herdar ;
+    fundo : transparente ;
+    fronteira : nenhuma ;
+    altura da linha : normal ;
+    -webkit-box-sizing : border-box ;
+    -moz-box-sizing : border-box ;
+    caixa-dimensionamento : caixa de borda ;
+    -webkit-background-clip : padding-box ;
+    background-clip : padding-box ;
+    vertical-align : top ;
+    Esboço : nenhum ;
+    altura da linha : 1 ;
+    fonte-família : ' Helvetica Neue ' , Helvética , Arial , ' Lucida Grande ' , sem-serif ;
+    -webkit-font-smoothing : antialiased ;
+    -moz-osx-font-smoothing : grayscale ;
+    font-weight : 400 ;
+    tamanho da fonte : 15 px ;
+    espaçamento entre letras : 0 ;
+    borda : 1 px  sólido  #ddd ;
+    -webkit-border-radius : 4 px ;
+    raio de borda : 4 px ;
+    cor de fundo : # f9f9f9 ;
+    -webkit-box-shadow : nenhum ;
+    caixa-sombra : nenhuma ;
+    preenchimento : 4 px  8 px  0  8 px ;
+    margem : 0 ;
+    tamanho da fonte : 15 px ;
+    altura : 31 px ;
+    font-weight : 400 ;
+    -webkit-box-sizing : border-box ;
+    -moz-box-sizing : border-box ;
+    caixa-dimensionamento : caixa de borda ;
+    fronteira : nenhuma ;
+    cor de fundo : transparente ;
+    border-bottom : 1 px  sólido  #ddd ;
+    -webkit-border-radius : 0 px ;
+    raio de borda : 10 px ;
+}
+.list__item {
+    margem : 0 ;
+    preenchimento : 0 ;
+    posição : relativa ;
+    estilo de lista : nenhum ;
+    -webkit-box-sizing : border-box ;
+    -moz-box-sizing : border-box ;
+    caixa-dimensionamento : caixa de borda ;
+    exibição : bloco ;
+    preenchimento : 0  10 px  0  10 px ;
+    margem : 0  0  0  0 ;
+    border-top : nenhum ;
+    border-bottom : 1 px  sólido  #ddd ;
+    cor de fundo : transparente ;
+    min-height : 44 px ;
+    altura da linha : 44 px ;
+    margem inferior : 5 px ;
+    caixa-sombra : 0  -5 px  7 px  -5 px  # 000 , 0  3 px  7 px  -2 px  # 000 ;
+    tamanho da fonte : 15 px ;
+}
+
+.navigation-bar__title {
+    altura da linha : 44 px ;
+    font-size : 14 px ;
+    font-weight : 500 ;
+    cor : #fff ;
+    margem : 0 ;
+    preenchimento : 0 ;
+    transbordamento : visível ;
+}
+
+.page {
+    fonte-família : ' Helvetica Neue ' , Helvética , Arial , ' Lucida Grande ' , sem-serif ;
+    -webkit-font-smoothing : antialiased ;
+    -moz-osx-font-smoothing : grayscale ;
+    font-weight : 400 ;
+    font-size : 17 px ;
+    cor de fundo : # f9f9f9 ;
+    posição : absoluta ;
+    topo : 0 px ;
+    esquerda : 0 px ;
+    direita : 0 px ;
+    fundo : 0 px ;
+    transbordamento : visível ;
+    tamanho da fonte : 15 px ;
+	cor : #FFFFFF ;
+}
+
+.checkbox  >  .checkbox__checkmark : antes de {
+    conteúdo : ' ' ;
+    posição : absoluta ;
+    -webkit-box-sizing : border-box ;
+    -moz-box-sizing : border-box ;
+    caixa-dimensionamento : caixa de borda ;
+    -webkit-background-clip : padding-box ;
+    background-clip : padding-box ;
+    largura : 24 px ;
+    altura : 24 px ;
+    fundo : transparente ;
+    borda : 1 px  rgba sólido  ( 14 , 14 , 14 , 0.81 );
+    -webkit-border-radius : 16 px ;
+    raio de borda : 16 px ;
+    -webkit-box-shadow : nenhum ;
+    caixa-sombra : nenhuma ;
+    esquerda : 0 ;
+}
+
+.checkbox  >  .checkbox__checkmark : depois {
+    conteúdo : ' ' ;
+    posição : absoluta ;
+    topo : 6 px ;
+    esquerda : 5 px ;
+    largura : 12 px ;
+    altura : 6 px ;
+    fundo : transparente ;
+    borda : 3 px  sólido  #fff ;
+    largura da borda : 2 px ;
+    border-top : nenhum ;
+    fronteira-direita : nenhuma ;
+    -webkit-border-radius : 0 px ;
+    raio de borda : 0 px ;
+    -webkit-transform : rotate ( -45 deg );
+    -moz-transform : rotate ( -45 deg );
+    -ms-transform : rotate ( -45 deg );
+    -o-transform : rotate ( -45 deg );
+    transformar : girar ( -45 graus );
+    opacidade : 0 ;
+}
+
+.radio-button__checkmark : após {
+    conteúdo : ' ' ;
+    posição : absoluta ;
+    -webkit-border-radius : 100 % ;
+    radio de fronteira : 100 % ;
+    topo : 50 % ;
+    esquerda : 50 % ;
+    -webkit-transform : translate ( -50 % , -50 % );
+    -moz-transform : translate ( -50 % , -50 % );
+    -ms-transform : translate ( -50 % , -50 % );
+    -o-transform : translate ( -50 % , -50 % );
+    transformar : traduzir ( -50 % , -50 % );
+    topo : 6 px ;
+    esquerda : 5 px ;
+    opacidade : 0 ;
+    largura : 12 px ;
+    altura : 6 px ;
+    fundo : transparente ;
+    borda : 3 px  rgba sólido  ( 255 , 255 , 255 , 0,81 );
+    largura da borda : 2 px ;
+    border-top : nenhum ;
+    fronteira-direita : nenhuma ;
+    -webkit-border-radius : 0 px ;
+    raio de borda : 0 px ;
+    -webkit-transform : rotate ( -45 deg );
+    -moz-transform : rotate ( -45 deg );
+    -ms-transform : rotate ( -45 deg );
+    -o-transform : rotate ( -45 deg );
+    transformar : girar ( -45 graus );
+}
+ons-carousel-item {
+  exibição : tabela ;
+  texto-alinhamento : centro ;
+}
+
+.item-label {
+  exibição : tabela-célula ;
+  vertical-align : middle ;
+  cor : branco ;
+  altura da linha : 1 ;
+  tamanho da fonte : 48 px ;
+  font-weight : bold ;
+}
+
+.cover-label {
+  texto-alinhamento : centro ;
+  posição : absoluta ;
+  esquerda : 0 px ;
+  largura : 100 % ;
+  fundo : 10 px ;
+  cor : branco ;
+}
+.box {
+   posição : absoluta ;
+   alinhar : direita ;
+}
+© 2017 GitHub , Inc.
+Termos
+Privacidade
+Segurança
+Status
+Socorro
+Entre em contato com GitHub
+API
+Treinamento
+fazer compras
+Blog
